@@ -2,27 +2,27 @@
 @import "tw-animate-css";
 
 :root {
-  /* ARÔME Luxury Floral Color System */
-  --background: #faf8f5;
-  --foreground: #2d2d2d;
+  /* ARÔME Luxury Floral Color System - Refined */
+  --background: #fdfbf7; /* Softer cream */
+  --foreground: #1c1c1c; /* Softer black */
   --card: #ffffff;
-  --card-foreground: #2d2d2d;
+  --card-foreground: #1c1c1c;
   --popover: #ffffff;
-  --popover-foreground: #2d2d2d;
-  --primary: #5a6f4c;
-  --primary-foreground: #faf8f5;
-  --secondary: #e8dfd3;
-  --secondary-foreground: #2d2d2d;
-  --muted: #f5f0e8;
-  --muted-foreground: #7a7a7a;
-  --accent: #d4c4b0;
-  --accent-foreground: #2d2d2d;
-  --destructive: #c44536;
+  --popover-foreground: #1c1c1c;
+  --primary: #4a5d4e; /* Deeper Sage */
+  --primary-foreground: #fdfbf7;
+  --secondary: #f0e9df; /* Muted beige */
+  --secondary-foreground: #1c1c1c;
+  --muted: #f9f5f0;
+  --muted-foreground: #666666;
+  --accent: #dcd0bc; /* Warm sand */
+  --accent-foreground: #1c1c1c;
+  --destructive: #af3e32;
   --destructive-foreground: #ffffff;
-  --border: #e8dfd3;
-  --input: #e8dfd3;
-  --ring: #5a6f4c;
-  --radius: 1rem;
+  --border: #ece3d5;
+  --input: #ece3d5;
+  --ring: #4a5d4e;
+  --radius: 0.5rem; /* More minimalist radius */
   --chart-1: oklch(0.646 0.222 41.116);
   --chart-2: oklch(0.6 0.118 184.704);
   --chart-3: oklch(0.398 0.07 227.392);
@@ -37,6 +37,7 @@
   --sidebar-border: oklch(0.922 0 0);
   --sidebar-ring: oklch(0.708 0 0);
 }
+
 
 .dark {
   --background: oklch(0.145 0 0);

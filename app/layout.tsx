@@ -11,15 +11,39 @@ const notoSerifKR = Noto_Serif_KR({
 })
 
 export const metadata: Metadata = {
-  title: "ARÔME — 향으로 감정을 전하는 퍼퓸 하우스",
-  description: "감성적인 플로럴 퍼퓸 브랜드 ARÔME. 꽃과 향수로 전하는 특별한 이벤트와 제품을 만나보세요.",
+  title: "ARÔME | 감정을 기록하는 퍼퓸 하우스",
+  description: "ARÔME는 당신의 소중한 감정과 기억을 꽃말과 향기로 기록합니다. 성수동 시향실에서 당신만의 향을 발견하거나, 마음을 전하는 이벤트에 참여해 보세요.",
+  keywords: ["ARÔME", "아롬", "성수동 향수", "향수 브랜드", "꽃말 향수", "기억의 시향실", "퍼퓸 하우스"],
+  openGraph: {
+    title: "ARÔME | 감정을 기록하는 퍼퓸 하우스",
+    description: "당신의 소중한 감정을 꽃말과 향기로 기록하는 공간, ARÔME",
+    url: "https://aromeperfume.site",
+    siteName: "ARÔME",
+    images: [
+      {
+        url: "/seongsu-scent-exhibition-main.png",
+        width: 1200,
+        height: 630,
+        alt: "ARÔME Exhibition",
+      },
+    ],
+    locale: "ko_KR",
+    type: "website",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "ARÔME | 감정을 기록하는 퍼퓸 하우스",
+    description: "당신의 소중한 감정을 꽃말과 향기로 기록하는 공간, ARÔME",
+    images: ["/seongsu-scent-exhibition-main.png"],
+  },
   verification: {
     other: {
       "naver-site-verification": "70af4d50c775c12b9bc08448be0a1736f4fb3d5f",
     },
   },
-    generator: 'v0.app'
+  generator: 'v0.app'
 };
+
 
 export default function RootLayout({
   children,

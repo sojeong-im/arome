@@ -13,8 +13,25 @@ import { ScentKitSection } from "@/components/scent-kit-section"
 export default function HomePage() {
   const featuredProducts = products.slice(0, 3)
 
+  const jsonLd = {
+    "@context": "https://schema.org",
+    "@type": "Brand",
+    "name": "ARÔME",
+    "description": "감정을 기록하는 퍼퓸 하우스, ARÔME",
+    "url": "https://aromeperfume.site",
+    "logo": "https://aromeperfume.site/apple-icon.png",
+    "sameAs": [
+      "https://www.instagram.com/arome_official"
+    ]
+  }
+
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen selection:bg-primary/20 selection:text-primary">
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       <Header />
 
       {/* Hero Section */}
