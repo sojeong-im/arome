@@ -3,10 +3,10 @@
 import { useState } from "react"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
-import { Card } from "@/components/ui/card"
 import { events } from "@/lib/data"
 import Link from "next/link"
 import { Calendar } from "lucide-react"
+import { Reveal } from "@/components/reveal"
 
 export default function EventsPage() {
   const [activeTab, setActiveTab] = useState<"ongoing" | "upcoming" | "ended">("ongoing")
@@ -14,84 +14,93 @@ export default function EventsPage() {
   const filteredEvents = events.filter((event) => event.status === activeTab)
 
   const tabs = [
-    { id: "ongoing" as const, label: "진행중" },
-    { id: "upcoming" as const, label: "예정" },
-    { id: "ended" as const, label: "종료" },
+    { id: "ongoing" as const, label: "Ongoing" },
+    { id: "upcoming" as const, label: "Upcoming" },
+    { id: "ended" as const, label: "Past Events" },
   ]
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-[#FDFBF7]">
       <Header />
 
-      <div className="pt-32 pb-24 px-6">
+      <section className="pt-48 pb-32 px-6">
         <div className="max-w-7xl mx-auto">
-          {/* Header */}
-          <div className="text-center mb-16">
-            <h1 className="headline-primary mb-6">감정을 기록하는 시간</h1>
-            <p className="body-primary text-muted-foreground max-w-2xl mx-auto mb-4 leading-relaxed">
-              향은 말하지 못한 마음을 대신합니다.
-            </p>
-            <p className="body-secondary text-muted-foreground/80 max-w-xl mx-auto leading-relaxed italic text-sm">
-              Scent speaks for the heart that couldn't speak.
-            </p>
-          </div>
+          <Reveal>
+            <div className="text-center mb-24">
+              <span className="label-luxury text-olive mb-6 block">Our Seasons</span>
+              <h1 className="headline-hero mb-8">감정을 기록하는 시간</h1>
+              <p className="body-primary text-text/60 max-w-xl mx-auto font-serif italic text-lg line-clamp-2">
+                향은 말하지 못한 마음을 대신합니다.<br/>
+                Scent speaks for the heart that couldn't speak.
+              </p>
+            </div>
+          </Reveal>
 
-          {/* Tabs */}
-          <div className="flex justify-center mb-12">
-            <div className="inline-flex bg-secondary/30 rounded-full p-1">
+          {/* Floating Luxury Tab Bar */}
+          <div className="flex justify-center mb-24">
+            <div className="inline-flex border-b border-olive/10 px-8">
               {tabs.map((tab) => (
                 <button
                   key={tab.id}
                   onClick={() => setActiveTab(tab.id)}
-                  className={`px-6 py-2 rounded-full button-text-luxury transition-all ${
+                  className={`px-10 py-6 label-luxury transition-all duration-300 relative ${
                     activeTab === tab.id
-                      ? "bg-primary text-primary-foreground shadow-sm"
-                      : "text-muted-foreground hover:text-foreground"
+                      ? "text-olive"
+                      : "text-text/30 hover:text-text/50"
                   }`}
                 >
                   {tab.label}
+                  {activeTab === tab.id && (
+                    <div className="absolute bottom-0 left-0 right-0 h-[1.5px] bg-olive" />
+                  )}
                 </button>
               ))}
             </div>
           </div>
 
-          {/* Events Grid */}
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {filteredEvents.map((event) => (
-              <Link key={event.id} href={`/events/${event.id}`}>
-                <Card className="overflow-hidden rounded-3xl border-0 shadow-lg hover:shadow-xl transition-all duration-300 hover:-translate-y-2 h-full">
-                  <div className="aspect-[4/3] relative overflow-hidden">
+          {/* Events Grid - Artistic Layout */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-x-16 gap-y-32">
+            {filteredEvents.map((event, i) => (
+              <Reveal key={event.id} delay={0.1 * (i % 2)}>
+                <Link href={`/events/${event.id}`} className="group block">
+                  <div className="relative aspect-[3/2] mb-12 overflow-hidden bg-[#F5F1E9]">
                     <img
                       src={event.image || "/placeholder.svg"}
                       alt={event.title}
-                      className="w-full h-full object-cover"
+                      className="w-full h-full object-cover grayscale-[0.2] transition-all duration-1000 group-hover:grayscale-0 group-hover:scale-105"
                     />
-                    <div className="absolute top-4 right-4 bg-primary text-primary-foreground px-3 py-1 rounded-full caption-luxury">
-                      {event.status === "ongoing" ? "진행중" : event.status === "upcoming" ? "예정" : "종료"}
+                    <div className="absolute top-8 left-8">
+                      <div className="bg-[#FDFBF7]/90 backdrop-blur-sm px-4 py-2 text-[10px] uppercase tracking-[0.3em] text-olive">
+                        {event.status}
+                      </div>
                     </div>
                   </div>
-                  <div className="p-6">
-                    <h3 className="headline-tertiary text-2xl mb-2 tracking-[-0.02em]">{event.title}</h3>
-                    <p className="body-secondary text-muted-foreground mb-4 leading-relaxed">{event.description}</p>
-                    <div className="flex items-center body-small text-muted-foreground">
-                      <Calendar className="h-4 w-4 mr-2" />
-                      <span>
-                        {event.startDate} ~ {event.endDate}
-                      </span>
+                  <div className="max-w-md">
+                    <h3 className="headline-secondary text-3xl mb-6 group-hover:text-olive transition-colors underline-offset-8 decoration-olive/20 group-hover:underline">
+                      {event.title}
+                    </h3>
+                    <p className="body-secondary text-text/60 mb-8 leading-relaxed line-clamp-2 italic font-serif">
+                      {event.description}
+                    </p>
+                    <div className="flex items-center text-[11px] uppercase tracking-[0.2em] text-olive/40 font-medium">
+                      <Calendar className="h-4 w-4 mr-3 opacity-50" />
+                      <span>{event.startDate} — {event.endDate}</span>
                     </div>
                   </div>
-                </Card>
-              </Link>
+                </Link>
+              </Reveal>
             ))}
           </div>
 
           {filteredEvents.length === 0 && (
-            <div className="text-center py-16">
-              <p className="body-primary text-muted-foreground">해당하는 이벤트가 없습니다.</p>
+            <div className="text-center py-40">
+              <p className="body-primary text-text/30 font-serif italic text-xl">
+                준비된 이야기가 곧 찾아옵니다.
+              </p>
             </div>
           )}
         </div>
-      </div>
+      </section>
 
       <Footer />
     </main>

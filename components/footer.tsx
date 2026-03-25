@@ -7,74 +7,80 @@ export function Footer() {
   const currentYear = new Date().getFullYear()
 
   return (
-    <footer className="bg-secondary/20 border-t border-border">
-      <div className="max-w-7xl mx-auto px-6 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
-          {/* Brand */}
-          <div>
-            <h3 className="headline-tertiary text-2xl mb-4">ARÔME</h3>
-            <p className="body-secondary text-muted-foreground">
-              <span className="whitespace-nowrap">꽃과 향으로</span> 감정을 전하는{" "}
-              <span className="whitespace-nowrap">퍼퓸 하우스</span>
+    <footer className="bg-[#FDFBF7] border-t border-olive/10 pt-32 pb-16 px-6">
+      <div className="max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
+          {/* Brand Identity */}
+          <div className="md:col-span-2">
+            <h3 className="headline-secondary text-4xl mb-8 tracking-[-0.03em]">ARÔME</h3>
+            <p className="body-primary text-text/60 max-w-sm mb-12 font-serif italic italic-luxury">
+              "꽃과 향으로 누군가의 기억을 번역합니다. 당신의 가장 찬란한 순간에 ARÔME이 함께하기를."
             </p>
+            <div className="flex items-center space-x-6">
+              <a
+                href="https://instagram.com/arome_official"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="group flex items-center space-x-3 label-luxury text-olive/60 hover:text-olive transition-colors"
+                aria-label="Follow ARÔME on Instagram"
+              >
+                <div className="p-2 border border-olive/20 group-hover:border-olive group-hover:bg-olive group-hover:text-white transition-all duration-300">
+                  <Instagram className="h-4 w-4" />
+                </div>
+                <span>@arome_official</span>
+              </a>
+            </div>
           </div>
 
-          {/* Links */}
+          {/* Navigation */}
           <div>
-            <h4 className="label-luxury mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link
-                  href="/events"
-                  className="body-secondary text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Events
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/shop"
-                  className="body-secondary text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Shop
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/about"
-                  className="body-secondary text-muted-foreground hover:text-primary transition-colors"
-                >
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link
-                  href="/cart"
-                  className="body-secondary text-muted-foreground hover:text-primary transition-colors"
-                >
-                  Cart
-                </Link>
-              </li>
+            <h4 className="label-luxury mb-8 text-olive/80">Collections</h4>
+            <ul className="space-y-4">
+              {["Floral", "Aromatic", "Oriental", "Powdery"].map((cat) => (
+                <li key={cat}>
+                  <Link
+                    href={`/shop?category=${cat.toLowerCase()}`}
+                    className="body-secondary text-text/40 hover:text-olive hover:translate-x-1 transition-all inline-block"
+                  >
+                    {cat}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Social */}
+          {/* Explore */}
           <div>
-            <h4 className="label-luxury mb-4">Follow Us</h4>
-            <a
-              href="https://instagram.com/_arome_perfume"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex items-center space-x-2 body-secondary text-muted-foreground hover:text-primary transition-colors"
-            >
-              <Instagram className="h-5 w-5" />
-              <span>@_arome_perfume</span>
-            </a>
+            <h4 className="label-luxury mb-8 text-olive/80">Explore</h4>
+            <ul className="space-y-4">
+              {[
+                { name: "About Story", href: "/about" },
+                { name: "Seasonal Events", href: "/events" },
+                { name: "Scent Kit", href: "/#scent-kit" },
+                { name: "Contact", href: "/contact" },
+              ].map((link) => (
+                <li key={link.name}>
+                  <Link
+                    href={link.href}
+                    className="body-secondary text-text/40 hover:text-olive hover:translate-x-1 transition-all inline-block"
+                  >
+                    {link.name}
+                  </Link>
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
 
-        <div className="pt-8 border-t border-border text-center">
-          <p className="body-small text-muted-foreground">&copy; {currentYear} ARÔME. All rights reserved.</p>
+        {/* Legal & Copyright */}
+        <div className="pt-16 border-t border-olive/10 flex flex-col md:flex-row justify-between items-center gap-8">
+          <p className="text-[10px] uppercase tracking-[0.2em] text-text/30">
+            &copy; {currentYear} ARÔME. Curation for Your Memories.
+          </p>
+          <div className="flex space-x-10 text-[10px] uppercase tracking-[0.2em] text-text/30">
+            <Link href="/privacy" className="hover:text-olive transition-colors">Privacy Policy</Link>
+            <Link href="/terms" className="hover:text-olive transition-colors">Terms of Service</Link>
+          </div>
         </div>
       </div>
     </footer>
