@@ -156,7 +156,7 @@ export const events: Event[] = [
     flowerMeaning: "표현하지 못한 감정, 꽃말로 전하는 마음",
     story:
       "당신이 전하지 못한 말이 있다면, 이제는 꽃으로 남겨주세요. 글이 아닌 꽃과 향으로 고백하는 시간입니다. 현장에서 꽃을 선택하고, 태그 카드에 짧은 마음을 적어 메시지 월에 꽂아주세요. 당신의 감정이 향기로 기록됩니다.",
-    image: "/flower-message-wall.jpg",
+    image: "/event-message-wall.png",
     formUrl: "https://forms.google.com/flower-message",
     status: "ongoing",
     startDate: "2025-08-10",
@@ -169,7 +169,7 @@ export const events: Event[] = [
     flowerMeaning: "기억, 계절, 감정의 향기화",
     story:
       "당신의 어느 순간을 향으로 남긴다면, 어떤 계절인가요? 참가자의 기억과 감정을 듣고, 그에 어울리는 향을 시향과 인터뷰로 제안합니다. 인터뷰 테이블에서 당신만의 향을 발견하고, 결과 카드 또는 미니 향을 받아가세요.",
-    image: "/scent-memory-interview.jpg",
+    image: "/event-scent-interview.png",
     formUrl: "https://forms.google.com/scent-memory",
     status: "ongoing",
     startDate: "2025-08-10",
@@ -182,7 +182,7 @@ export const events: Event[] = [
     flowerMeaning: "전하지 못한 마음, 향기로 전달되는 편지",
     story:
       "이 향을 전합니다. 말로는 다 하지 못한 마음이니까요. 마음을 전하고 싶은 사람에게 향수나 고체향에 짧은 문장을 담아 전달하세요. 향 엽서, 꽃 스티커, QR 코드 또는 실제 배송으로 당신의 마음이 향기와 함께 전해집니다. 익명 발송도 가능합니다.",
-    image: "/scented-letter-delivery.jpg",
+    image: "/event-scented-letter.png",
     formUrl: "https://forms.google.com/scented-letter",
     status: "upcoming",
     startDate: "2025-03-01",
