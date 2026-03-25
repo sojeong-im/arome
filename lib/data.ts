@@ -195,8 +195,9 @@ export const events: Event[] = [
     flowerMeaning: "그리움, 고백, 그리고 당신을 향한 진심",
     story:
       "성수동의 고요한 골목 끝, 꽃과 향기가 가득한 작은 전시 공간이 마련되었습니다. 이곳에서 당신은 계절을 머금은 여러 가지 향을 천천히 음미하고, 각 꽃이 가진 고유한 꽃말을 마주하게 됩니다. 향기를 맡으며 문득 떠오르는 사람이 있다면, 그를 위해 준비된 작은 쪽지에 당신의 마음을 적어주세요. 당신이 고른 향기와 진심 어린 문장이 꽃말과 어우러져 세상에 단 하나뿐인 선물이 될 것입니다.",
-    image: "/romantic-rose-garden-event.jpg",
+    image: "/seongsu-scent-exhibition-main.png",
     formUrl: "https://forms.google.com/seongsu-exhibition",
+
     status: "ongoing",
     startDate: "2026-03-01",
     endDate: "2026-06-30",
