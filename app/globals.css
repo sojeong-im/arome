@@ -1,0 +1,507 @@
+@import "tailwindcss";
+@import "tw-animate-css";
+
+:root {
+  /* ARÔME Luxury Floral Color System */
+  --background: #faf8f5;
+  --foreground: #2d2d2d;
+  --card: #ffffff;
+  --card-foreground: #2d2d2d;
+  --popover: #ffffff;
+  --popover-foreground: #2d2d2d;
+  --primary: #5a6f4c;
+  --primary-foreground: #faf8f5;
+  --secondary: #e8dfd3;
+  --secondary-foreground: #2d2d2d;
+  --muted: #f5f0e8;
+  --muted-foreground: #7a7a7a;
+  --accent: #d4c4b0;
+  --accent-foreground: #2d2d2d;
+  --destructive: #c44536;
+  --destructive-foreground: #ffffff;
+  --border: #e8dfd3;
+  --input: #e8dfd3;
+  --ring: #5a6f4c;
+  --radius: 1rem;
+  --chart-1: oklch(0.646 0.222 41.116);
+  --chart-2: oklch(0.6 0.118 184.704);
+  --chart-3: oklch(0.398 0.07 227.392);
+  --chart-4: oklch(0.828 0.189 84.429);
+  --chart-5: oklch(0.769 0.188 70.08);
+  --sidebar: oklch(1 0 0);
+  --sidebar-foreground: oklch(0.145 0 0);
+  --sidebar-primary: oklch(0.205 0 0);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.97 0 0);
+  --sidebar-accent-foreground: oklch(0.205 0 0);
+  --sidebar-border: oklch(0.922 0 0);
+  --sidebar-ring: oklch(0.708 0 0);
+}
+
+.dark {
+  --background: oklch(0.145 0 0);
+  --foreground: oklch(0.985 0 0);
+  --card: oklch(0.145 0 0);
+  --card-foreground: oklch(0.985 0 0);
+  --popover: oklch(0.145 0 0);
+  --popover-foreground: oklch(0.985 0 0);
+  --primary: oklch(0.985 0 0);
+  --primary-foreground: oklch(0.205 0 0);
+  --secondary: oklch(0.269 0 0);
+  --secondary-foreground: oklch(0.985 0 0);
+  --muted: oklch(0.269 0 0);
+  --muted-foreground: oklch(0.708 0 0);
+  --accent: oklch(0.269 0 0);
+  --accent-foreground: oklch(0.985 0 0);
+  --destructive: oklch(0.396 0.141 25.723);
+  --destructive-foreground: oklch(0.637 0.237 25.331);
+  --border: oklch(0.269 0 0);
+  --input: oklch(0.269 0 0);
+  --ring: oklch(0.439 0 0);
+  --chart-1: oklch(0.488 0.243 264.376);
+  --chart-2: oklch(0.696 0.17 162.48);
+  --chart-3: oklch(0.769 0.188 70.08);
+  --chart-4: oklch(0.627 0.265 303.9);
+  --chart-5: oklch(0.645 0.246 16.439);
+  --sidebar: oklch(0.205 0 0);
+  --sidebar-foreground: oklch(0.985 0 0);
+  --sidebar-primary: oklch(0.488 0.243 264.376);
+  --sidebar-primary-foreground: oklch(0.985 0 0);
+  --sidebar-accent: oklch(0.269 0 0);
+  --sidebar-accent-foreground: oklch(0.985 0 0);
+  --sidebar-border: oklch(0.269 0 0);
+  --sidebar-ring: oklch(0.439 0 0);
+}
+
+@theme inline {
+  /* Updated font variables to use Pretendard and Noto Serif KR */
+  --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
+  --font-serif: var(--font-noto-serif-kr), "Noto Serif KR", Georgia, serif;
+
+  /* ARÔME Color Palette */
+  --color-ivory: #faf8f5;
+  --color-beige: #e8dfd3;
+  --color-olive: #5a6f4c;
+  --color-olive-dark: #3d4a33;
+  --color-text: #2d2d2d;
+  --color-text-light: #7a7a7a;
+  --color-accent: #d4c4b0;
+
+  /* Shadcn color mappings */
+  --color-background: var(--background);
+  --color-foreground: var(--foreground);
+  --color-card: var(--card);
+  --color-card-foreground: var(--card-foreground);
+  --color-popover: var(--popover);
+  --color-popover-foreground: var(--popover-foreground);
+  --color-primary: var(--primary);
+  --color-primary-foreground: var(--primary-foreground);
+  --color-secondary: var(--secondary);
+  --color-secondary-foreground: var(--secondary-foreground);
+  --color-muted: var(--muted);
+  --color-muted-foreground: var(--muted-foreground);
+  --color-accent: var(--accent);
+  --color-accent-foreground: var(--accent-foreground);
+  --color-destructive: var(--destructive);
+  --color-destructive-foreground: var(--destructive-foreground);
+  --color-border: var(--border);
+  --color-input: var(--input);
+  --color-ring: var(--ring);
+  --radius-sm: calc(var(--radius) - 4px);
+  --radius-md: calc(var(--radius) - 2px);
+  --radius-lg: var(--radius);
+  --radius-xl: calc(var(--radius) + 4px);
+  --color-chart-1: var(--chart-1);
+  --color-chart-2: var(--chart-2);
+  --color-chart-3: var(--chart-3);
+  --color-chart-4: var(--chart-4);
+  --color-chart-5: var(--chart-5);
+  --color-sidebar: var(--sidebar);
+  --color-sidebar-foreground: var(--sidebar-foreground);
+  --color-sidebar-primary: var(--sidebar-primary);
+  --color-sidebar-primary-foreground: var(--sidebar-primary-foreground);
+  --color-sidebar-accent: var(--sidebar-accent);
+  --color-sidebar-accent-foreground: var(--sidebar-accent-foreground);
+  --color-sidebar-border: var(--sidebar-border);
+  --color-sidebar-ring: var(--sidebar-ring);
+}
+
+@layer base {
+  * {
+    @apply border-border outline-ring/50;
+  }
+
+  body {
+    @apply bg-background text-foreground font-sans;
+    font-feature-settings: "kern" 1, "liga" 1, "calt" 1;
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    scroll-behavior: smooth;
+    line-height: 1.7;
+    /* Added Korean typography rules for natural line breaks */
+    word-break: keep-all;
+    line-break: strict;
+    hyphens: none;
+  }
+
+  /* Enhanced typography system for luxury perfume brand aesthetic */
+
+  /* Headline Typography - Noto Serif KR */
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-serif;
+    letter-spacing: -0.02em;
+    font-weight: 400;
+  }
+
+  h1 {
+    @apply text-6xl md:text-7xl lg:text-8xl;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for Korean heading balance */
+    text-wrap: balance;
+  }
+
+  h2 {
+    @apply text-4xl md:text-5xl lg:text-6xl;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for Korean heading balance */
+    text-wrap: balance;
+  }
+
+  h3 {
+    @apply text-3xl md:text-4xl;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for Korean heading balance */
+    text-wrap: balance;
+  }
+
+  h4 {
+    @apply text-2xl md:text-3xl;
+    line-height: 1.3;
+    letter-spacing: -0.015em;
+  }
+
+  h5 {
+    @apply text-xl md:text-2xl;
+    line-height: 1.35;
+  }
+
+  h6 {
+    @apply text-lg md:text-xl;
+    line-height: 1.4;
+  }
+
+  /* Body Typography - Pretendard Sans-serif */
+  p {
+    @apply font-sans leading-relaxed;
+    letter-spacing: -0.01em;
+    /* Added text-wrap: pretty for natural paragraph flow */
+    text-wrap: pretty;
+  }
+
+  /* Large body text */
+  .text-lg p,
+  p.text-lg {
+    @apply leading-relaxed;
+  }
+
+  /* Small body text */
+  .text-sm p,
+  p.text-sm {
+    line-height: 1.6;
+  }
+
+  /* List items also get Korean typography rules */
+  li {
+    word-break: keep-all;
+    text-wrap: pretty;
+  }
+
+  /* Luxury brand specific styles */
+  .headline-luxury {
+    @apply font-serif;
+    font-weight: 400;
+    letter-spacing: -0.02em;
+  }
+
+  .subheadline-luxury {
+    @apply font-serif;
+    font-weight: 600;
+    letter-spacing: -0.02em;
+  }
+
+  .body-luxury {
+    @apply font-sans leading-relaxed;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+  }
+
+  .caption-luxury {
+    @apply font-sans text-sm;
+    font-weight: 400;
+    line-height: 1.5;
+    letter-spacing: 0.01em;
+  }
+
+  /* Italic emphasis for luxury feel */
+  em,
+  .italic-luxury {
+    @apply font-serif italic;
+    font-weight: 400;
+  }
+}
+
+@layer utilities {
+  .text-balance {
+    text-wrap: balance;
+  }
+
+  /* Added utility class for preventing line breaks in brand names */
+  .nowrap {
+    white-space: nowrap;
+  }
+
+  /* Added luxury typography utilities */
+
+  /* Letter spacing utilities for luxury brand */
+  .tracking-luxury-tight {
+    letter-spacing: -0.02em;
+  }
+
+  .tracking-luxury-normal {
+    letter-spacing: -0.01em;
+  }
+
+  .tracking-luxury-wide {
+    letter-spacing: 0.05em;
+  }
+
+  /* Line height utilities */
+  .leading-luxury-tight {
+    line-height: 1.1;
+  }
+
+  .leading-luxury-normal {
+    line-height: 1.5;
+  }
+
+  .leading-luxury-relaxed {
+    line-height: 1.7;
+  }
+
+  .leading-luxury-loose {
+    line-height: 1.9;
+  }
+
+  /* Headline styles */
+  .headline-hero {
+    @apply font-serif text-6xl md:text-7xl lg:text-8xl xl:text-9xl;
+    font-weight: 400;
+    line-height: 1.05;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for hero headlines */
+    text-wrap: balance;
+  }
+
+  .headline-primary {
+    @apply font-serif text-5xl md:text-6xl lg:text-7xl;
+    font-weight: 400;
+    line-height: 1.1;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for primary headlines */
+    text-wrap: balance;
+  }
+
+  .headline-secondary {
+    @apply font-serif text-4xl md:text-5xl;
+    font-weight: 400;
+    line-height: 1.15;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for secondary headlines */
+    text-wrap: balance;
+  }
+
+  .headline-tertiary {
+    @apply font-serif text-3xl md:text-4xl;
+    font-weight: 600;
+    line-height: 1.2;
+    letter-spacing: -0.02em;
+    /* Added text-wrap: balance for tertiary headlines */
+    text-wrap: balance;
+  }
+
+  /* Body text styles */
+  .body-primary {
+    @apply font-sans text-base md:text-lg leading-relaxed;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    /* Added text-wrap: pretty for body text */
+    text-wrap: pretty;
+  }
+
+  .body-secondary {
+    @apply font-sans text-sm md:text-base leading-relaxed;
+    font-weight: 400;
+    letter-spacing: -0.005em;
+    /* Added text-wrap: pretty for body text */
+    text-wrap: pretty;
+  }
+
+  .body-small {
+    @apply font-sans text-xs md:text-sm;
+    font-weight: 400;
+    line-height: 1.6;
+    letter-spacing: 0;
+  }
+
+  /* Label and UI text */
+  .label-luxury {
+    @apply font-sans text-xs uppercase;
+    font-weight: 500;
+    letter-spacing: 0.1em;
+  }
+
+  .button-text-luxury {
+    @apply font-sans text-sm md:text-base;
+    font-weight: 500;
+    letter-spacing: 0.02em;
+  }
+
+  /* ARÔME Typography Animation Keyframes */
+
+  /* 1. Kerning Animation - Letter spacing wide to tight with fade */
+  @keyframes arome-kerning {
+    0% {
+      opacity: 0;
+      letter-spacing: 0.4em;
+      transform: translateY(30px) scale(0.95);
+      filter: blur(4px);
+    }
+    60% {
+      opacity: 0.8;
+      letter-spacing: 0.05em;
+    }
+    100% {
+      opacity: 1;
+      letter-spacing: 0.08em;
+      transform: translateY(0) scale(1);
+      filter: blur(0);
+    }
+  }
+
+  /* 2. Blur Animation - Soft blur to sharp */
+  @keyframes arome-blur {
+    0% {
+      opacity: 0;
+      filter: blur(20px);
+    }
+    100% {
+      opacity: 1;
+      filter: blur(0);
+    }
+  }
+
+  /* 3. Wipe Animation - Top to bottom clip reveal */
+  @keyframes arome-wipe {
+    0% {
+      clip-path: inset(0 0 100% 0);
+    }
+    100% {
+      clip-path: inset(0 0 0 0);
+    }
+  }
+
+  /* 4. Cascade Animation - Sequential letter appearance */
+  @keyframes arome-cascade {
+    0% {
+      opacity: 0;
+      transform: translateY(30px) scale(0.8);
+    }
+    100% {
+      opacity: 1;
+      transform: translateY(0) scale(1);
+    }
+  }
+
+  /* 5. Sheen Animation - Gold sheen sweep on hover */
+  @keyframes arome-sheen {
+    0% {
+      background-position: -200% center;
+    }
+    100% {
+      background-position: 200% center;
+    }
+  }
+
+  /* 6. Float Animation - Subtle vertical floating */
+  @keyframes arome-float {
+    0%,
+    100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-8px);
+    }
+  }
+
+  /* 7. Luxury Glow - Subtle ambient glow effect */
+  @keyframes arome-luxury-glow {
+    0%,
+    100% {
+      text-shadow: 0 0 20px rgba(212, 196, 176, 0.3), 0 0 40px rgba(212, 196, 176, 0.2), 0 2px 4px rgba(45, 45, 45, 0.1);
+    }
+    50% {
+      text-shadow: 0 0 30px rgba(212, 196, 176, 0.4), 0 0 60px rgba(212, 196, 176, 0.25), 0 2px 6px
+        rgba(45, 45, 45, 0.15);
+    }
+  }
+
+  /* Utility classes for ARÔME animations */
+  .animate-arome-kerning {
+    animation: arome-kerning 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+  }
+
+  .animate-arome-blur {
+    animation: arome-blur 0.8s ease-out forwards;
+  }
+
+  .animate-arome-wipe {
+    animation: arome-wipe 0.7s ease-out forwards;
+  }
+
+  .animate-arome-cascade {
+    animation: arome-cascade 0.6s ease-out forwards;
+  }
+
+  .animate-arome-float {
+    animation: arome-float 6s ease-in-out infinite;
+  }
+
+  .animate-arome-luxury-glow {
+    animation: arome-luxury-glow 4s ease-in-out infinite;
+  }
+
+  /* Respect reduced motion preferences */
+  @media (prefers-reduced-motion: reduce) {
+    .animate-arome-kerning,
+    .animate-arome-blur,
+    .animate-arome-wipe,
+    .animate-arome-cascade,
+    .animate-arome-float,
+    .animate-arome-luxury-glow {
+      animation: none;
+      opacity: 1;
+      transform: none;
+      filter: none;
+      clip-path: none;
+    }
+  }
+}
