@@ -20,100 +20,88 @@ export function HeroSection() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={containerRef} className="relative h-screen overflow-hidden">
-      <motion.div className="absolute inset-0 bg-ivory" style={{ scale: imageScale, y: imageY }}>
+    <section ref={containerRef} className="relative h-screen overflow-hidden bg-[#FDFBF7]">
+      <motion.div className="absolute inset-0" style={{ scale: imageScale, y: imageY }}>
         <Image
           src="/subtle-soft-floral-blur-background-low-saturation-.jpg"
           alt=""
           fill
-          className="object-cover opacity-30"
+          className="object-cover opacity-20 sepia-[0.2]"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-ivory/50 via-transparent to-ivory/30" />
+        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/80 via-transparent to-[#FDFBF7]/40" />
       </motion.div>
 
       <motion.div
-        className="relative z-10 h-full flex flex-col items-center justify-center"
+        className="relative z-10 h-full flex flex-col items-center justify-center px-6"
         style={{ y: contentY, opacity: contentOpacity }}
       >
-        <div className="container-custom text-center">
-          <motion.div
-            className="flex items-center justify-center gap-4 mb-8"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.1 }}
+        <div className="max-w-4xl w-full text-center">
+          <motion.span
+            initial={{ opacity: 0, y: 10 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 0.2 }}
+            className="block text-sm uppercase tracking-[0.3em] text-olive mb-8 font-medium"
           >
-            <div className="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent via-accent to-transparent" />
-            <div className="w-1.5 h-1.5 rounded-full bg-accent/60" />
-            <div className="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent via-accent to-transparent" />
-          </motion.div>
-
-          {/* Main ARÔME Title with animation */}
-          <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 0.5, delay: 0.2 }}>
-            <HeroTitleArome variant="kerning" className="mb-8" />
-          </motion.div>
+            Memories in every scent
+          </motion.span>
 
           <motion.div
-            className="flex items-center justify-center gap-4 mb-16"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 0.8, delay: 0.4 }}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 1.5, delay: 0.4 }}
+            className="mb-10"
           >
-            <div className="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent via-accent to-transparent" />
-            <div className="w-1.5 h-1.5 rounded-full bg-accent/60" />
-            <div className="h-[1px] w-12 md:w-20 bg-gradient-to-r from-transparent via-accent to-transparent" />
+            <HeroTitleArome variant="kerning" className="scale-110 md:scale-125 mb-12" />
           </motion.div>
 
-          {/* Screen reader only text for accessibility */}
-          <p className="sr-only">
-            ARÔME은 꽃과 향을 통해 한 사람의 이야기를 기록하는 퍼퓸 하우스입니다. A scent that resembles you, a flower
-            that remains with you.
-          </p>
-
-          <motion.div
-            className="flex flex-col sm:flex-row items-center justify-center gap-4 mt-12"
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.6, delay: 0.8 }}
+            transition={{ duration: 1, delay: 0.8 }}
+            className="text-lg md:text-xl text-text/70 font-light leading-relaxed max-w-2xl mx-auto mb-16 font-serif italic"
+          >
+            "향기는 말하지 못한 진정한 마음을 기록하는 유일한 언어입니다."
+          </motion.p>
+
+          <motion.div
+            className="flex flex-col sm:flex-row items-center justify-center gap-6"
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 1, delay: 1 }}
           >
             <Link
               href="/events"
-              className="px-8 py-4 bg-olive text-ivory rounded-full button-text-luxury hover:bg-olive-dark transition-colors duration-300 min-w-[180px] text-center"
-              aria-label="ARÔME 이벤트 페이지로 이동"
+              className="group relative px-10 py-4 bg-olive text-ivory overflow-hidden transition-all duration-500 rounded-none min-w-[200px]"
             >
-              이벤트 보기
+              <span className="relative z-10 button-text-luxury">이벤트 참여하기</span>
+              <div className="absolute inset-0 bg-olive-dark transform translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
             </Link>
             <Link
               href="/shop"
-              className="px-8 py-4 bg-beige text-text rounded-full button-text-luxury hover:bg-accent transition-colors duration-300 min-w-[180px] text-center"
-              aria-label="ARÔME 향수 컬렉션 페이지로 이동"
+              className="group relative px-10 py-4 border border-olive text-olive overflow-hidden transition-all duration-500 rounded-none min-w-[200px]"
             >
-              향수 컬렉션
+              <span className="relative z-10 button-text-luxury">컬렉션 둘러보기</span>
+              <div className="absolute inset-0 bg-olive transform translate-y-full group-hover:translate-y-0 transition-transform duration-500" />
+              <div className="absolute inset-0 bg-olive opacity-0 group-hover:opacity-10 transition-opacity" />
             </Link>
           </motion.div>
         </div>
       </motion.div>
 
-      {/* Info Strip - keeping existing brand messages */}
       <motion.div
-        className="absolute bottom-0 left-0 right-0 z-20 flex justify-center"
-        initial={{ opacity: 0, y: 20 }}
-        animate={{ opacity: 1, y: 0 }}
-        transition={{ duration: 0.8, delay: 1.2 }}
+        className="absolute bottom-12 left-0 right-0 z-20 hidden md:flex justify-center"
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1.5, delay: 1.5 }}
       >
-        <BlurPanel className="mx-6 mb-6 px-8 py-4 bg-beige/40 backdrop-blur-md border-beige/60">
-          <div className="flex flex-col md:flex-row items-center justify-center gap-4 md:gap-8 text-text/80">
-            <span className="text-sm leading-relaxed text-center">
-              우리는 향을 만들지 않습니다. 우리는 <span className="whitespace-nowrap">기억을 남깁니다.</span>
-            </span>
-            <span className="hidden md:inline text-text/40">·</span>
-            <span className="text-sm leading-relaxed text-center">
-              향은 말하지 못한 <span className="whitespace-nowrap">마음을 대신합니다.</span>
-            </span>
-          </div>
-        </BlurPanel>
+        <div className="flex flex-col items-center gap-4">
+          <div className="w-[1px] h-16 bg-gradient-to-b from-olive/40 to-transparent" />
+          <span className="text-[10px] uppercase tracking-[0.5em] text-olive/60 vertical-text">Scroll</span>
+        </div>
       </motion.div>
     </section>
+
   )
 }
