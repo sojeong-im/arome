@@ -25,7 +25,7 @@ export function ScentKitSection() {
                 기억의 파편을 담은 시향 키트
               </h2>
               <p className="body-primary text-text/60 max-w-2xl mx-auto leading-relaxed font-serif italic text-lg">
-                집으로 찾아가는 ARÔME의 작은 정원.<br />
+                집으로 찾아가는 AROM의 작은 정원.<br />
                 간단한 시향 신청을 통해 당신의 공간에서 꽃과 향기를 경험해 보세요.
               </p>
             </div>
@@ -65,7 +65,7 @@ export function ScentKitSection() {
                   marginHeight={0}
                   marginWidth={0}
                   className="w-full"
-                  title="ARÔME 시향 키트 신청 폼"
+                  title="AROM 시향 키트 신청 폼"
                 >
                   로딩 중…
                 </iframe>

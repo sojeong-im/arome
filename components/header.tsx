@@ -61,7 +61,7 @@ export function Header() {
                 whileHover={{ scale: 1.02 }}
                 transition={{ duration: 0.2 }}
               >
-                ARÔME
+                AROM
               </motion.h1>
             </Link>
 

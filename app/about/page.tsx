@@ -15,7 +15,7 @@ export default function AboutPage() {
             <div className="mb-32">
               <span className="label-luxury text-olive mb-6 block text-center">Brand Essence</span>
               <h1 className="headline-hero text-center mb-12">
-                기억을 향기로<br />기록하는 집, ARÔME
+                기억을 향기로<br />기록하는 집, AROM
               </h1>
               <div className="w-px h-24 bg-olive/20 mx-auto mb-12"></div>
               <p className="body-primary text-xl text-center max-w-2xl mx-auto font-serif italic text-text/70 leading-relaxed">
@@ -29,7 +29,7 @@ export default function AboutPage() {
               <div className="aspect-[4/5] bg-secondary/20 relative overflow-hidden">
                 <img 
                   src="/elegant-rose-perfume-bottle.jpg" 
-                  alt="ARÔME Philosophy" 
+                  alt="AROM Philosophy" 
                   className="w-full h-full object-cover grayscale-[0.3] hover:grayscale-0 transition-all duration-1000"
                 />
               </div>
@@ -38,7 +38,7 @@ export default function AboutPage() {
               <div className="space-y-8">
                 <h2 className="headline-secondary text-4xl">우리의 철학</h2>
                 <p className="body-primary text-text/80 leading-relaxed">
-                  ARÔME은 프랑스어로 '향기'를 뜻하지만, 우리에게 이 단어는 '감정의 잔상'을 의미합니다. 
+                  AROM은 프랑스어로 '향기'를 뜻하지만, 우리에게 이 단어는 '감정의 잔상'을 의미합니다. 
                   우리는 수만 가지의 천연 원료 중에서도 꽃이 가진 고유의 꽃말과 생명력에 집중합니다.
                 </p>
                 <p className="body-primary text-text/80 leading-relaxed">

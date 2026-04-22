@@ -43,7 +43,7 @@ export default function MyPage() {
               </div>
               <h1 className="headline-primary mb-4 tracking-[-0.02em]">나의 향 여정</h1>
               <p className="body-primary text-muted-foreground leading-relaxed">
-                ARÔME과 함께한 시간 · {user.joinDate}부터
+                AROM과 함께한 시간 · {user.joinDate}부터
               </p>
             </div>
           </Reveal>
@@ -260,7 +260,7 @@ export default function MyPage() {
                   </div>
                   <div>
                     <p className="body-secondary text-muted-foreground mb-2">2024.11.05</p>
-                    <h3 className="label-luxury mb-2">ARÔME과의 첫 만남</h3>
+                    <h3 className="label-luxury mb-2">AROM과의 첫 만남</h3>
                     <p className="body-secondary text-muted-foreground leading-relaxed">
                       당신의 향 여정이 시작되었습니다.
                     </p>

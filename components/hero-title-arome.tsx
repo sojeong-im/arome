@@ -13,7 +13,7 @@ interface HeroTitleAromeProps {
 export function HeroTitleArome({ variant = "kerning", className = "" }: HeroTitleAromeProps) {
   const [isHovered, setIsHovered] = useState(false)
 
-  // Base styles for the ARÔME title
+  // Base styles for the AROM title
   const baseStyles =
     "font-serif whitespace-nowrap text-[14vw] md:text-[8.5rem] leading-[0.9] select-none " +
     "text-text relative " +
@@ -44,7 +44,7 @@ export function HeroTitleArome({ variant = "kerning", className = "" }: HeroTitl
   if (variant === "cascade") {
     const letters = ["A", "R", "Ô", "M", "E"]
     return (
-      <h1 className={`${baseStyles} ${className}`} aria-label="ARÔME – 향으로 감정을 전하는 퍼퓸 하우스">
+      <h1 className={`${baseStyles} ${className}`} aria-label="AROM – 향으로 감정을 전하는 퍼퓸 하우스">
         {letters.map((letter, index) => (
           <motion.span
             key={index}
@@ -65,7 +65,7 @@ export function HeroTitleArome({ variant = "kerning", className = "" }: HeroTitl
     return (
       <h1
         className={`${baseStyles} ${getVariantStyles()} ${className}`}
-        aria-label="ARÔME – 향으로 감정을 전하는 퍼퓸 하우스"
+        aria-label="AROM – 향으로 감정을 전하는 퍼퓸 하우스"
         onMouseEnter={() => setIsHovered(true)}
         onMouseLeave={() => setIsHovered(false)}
         style={{
@@ -73,7 +73,7 @@ export function HeroTitleArome({ variant = "kerning", className = "" }: HeroTitl
           transition: "background-position 1.2s ease-out",
         }}
       >
-        ARÔME
+        AROM
       </h1>
     )
   }
@@ -82,9 +82,9 @@ export function HeroTitleArome({ variant = "kerning", className = "" }: HeroTitl
   return (
     <h1
       className={`${baseStyles} ${getVariantStyles()} ${className}`}
-      aria-label="ARÔME – 향으로 감정을 전하는 퍼퓸 하우스"
+      aria-label="AROM – 향으로 감정을 전하는 퍼퓸 하우스"
     >
-      ARÔME
+      AROM
     </h1>
   )
 }

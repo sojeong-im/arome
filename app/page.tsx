@@ -16,8 +16,8 @@ export default function HomePage() {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Brand",
-    "name": "ARÔME",
-    "description": "감정을 기록하는 퍼퓸 하우스, ARÔME",
+    "name": "AROM",
+    "description": "감정을 기록하는 퍼퓸 하우스, AROM",
     "url": "https://aromeperfume.site",
     "logo": "https://aromeperfume.site/apple-icon.png",
     "sameAs": [
@@ -45,7 +45,7 @@ export default function HomePage() {
               <span className="label-luxury text-olive mb-4 block">Signature Collection</span>
               <h2 className="headline-secondary text-5xl mb-6">여운이 남는 시그니처 향</h2>
               <p className="body-primary text-muted-foreground">
-                ARÔME의 향수는 단순히 좋은 냄새를 넘어, 당신의 가장 소중한 기억을 소환하는 매개체가 됩니다.
+                AROM의 향수는 단순히 좋은 냄새를 넘어, 당신의 가장 소중한 기억을 소환하는 매개체가 됩니다.
               </p>
             </div>
             <Link href="/shop" className="group flex items-center gap-2 text-olive font-medium border-b border-olive/20 pb-1 hover:border-olive transition-all">
@@ -89,7 +89,7 @@ export default function HomePage() {
             <div className="order-2 md:order-1 relative aspect-[4/5] rounded-none overflow-hidden group">
               <img
                 src="/seongsu-scent-exhibition-main.png"
-                alt="ARÔME Events"
+                alt="AROM Events"
                 className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/10" />
@@ -98,7 +98,7 @@ export default function HomePage() {
               <span className="label-luxury text-olive mb-4 block">Limited Experience</span>
               <h2 className="headline-secondary text-5xl mb-8">당신의 기억을 기록하는<br/>오감의 전시</h2>
               <p className="body-primary text-muted-foreground mb-12 leading-relaxed">
-                ARÔME은 매달 성수동 시향실에서 특별한 꽃말과 함께하는 참여형 이벤트를 진행합니다. 
+                AROM은 매달 성수동 시향실에서 특별한 꽃말과 함께하는 참여형 이벤트를 진행합니다. 
                 향기를 맡으며 떠오르는 누군가에게, 진심이 담긴 쪽지를 남겨보세요.
               </p>
               <Button

@@ -31,7 +31,7 @@ export default function ShopPage() {
               <span className="label-luxury text-olive mb-6 block">Our Collection</span>
               <h1 className="headline-hero mb-8">당신의 계절을 위한 향기</h1>
               <p className="body-primary text-text/60 max-w-xl mx-auto font-serif italic text-lg">
-                ARÔME의 모든 향수는 엄선된 프리미엄 원재료와 한 사람의 진심 어린 이야기를 담아 조제됩니다.
+                AROM의 모든 향수는 엄선된 프리미엄 원재료와 한 사람의 진심 어린 이야기를 담아 조제됩니다.
               </p>
             </div>
           </Reveal>

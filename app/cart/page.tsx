@@ -94,7 +94,7 @@ export default function CartPage() {
                 </div>
                 <h2 className="headline-tertiary mb-3">장바구니가 비어있습니다</h2>
                 <p className="body-secondary text-muted-foreground mb-8 text-center max-w-md">
-                  <span className="whitespace-nowrap">ARÔME</span>의 향수 컬렉션에서
+                  <span className="whitespace-nowrap">AROM</span>의 향수 컬렉션에서
                   <br />
                   당신의 이야기를 담은 향을 찾아보세요
                 </p>

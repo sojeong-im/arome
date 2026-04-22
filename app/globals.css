@@ -2,7 +2,7 @@
 @import "tw-animate-css";
 
 :root {
-  /* ARÔME Luxury Floral Color System - Refined */
+  /* AROM Luxury Floral Color System - Refined */
   --background: #fdfbf7; /* Softer cream */
   --foreground: #1c1c1c; /* Softer black */
   --card: #ffffff;
@@ -79,7 +79,7 @@
   --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-serif: var(--font-noto-serif-kr), "Noto Serif KR", Georgia, serif;
 
-  /* ARÔME Color Palette */
+  /* AROM Color Palette */
   --color-ivory: #faf8f5;
   --color-beige: #e8dfd3;
   --color-olive: #5a6f4c;
@@ -376,7 +376,7 @@
     letter-spacing: 0.02em;
   }
 
-  /* ARÔME Typography Animation Keyframes */
+  /* AROM Typography Animation Keyframes */
 
   /* 1. Kerning Animation - Letter spacing wide to tight with fade */
   @keyframes arome-kerning {
@@ -465,7 +465,7 @@
     }
   }
 
-  /* Utility classes for ARÔME animations */
+  /* Utility classes for AROM animations */
   .animate-arome-kerning {
     animation: arome-kerning 1.2s cubic-bezier(0.16, 1, 0.3, 1) forwards;
   }

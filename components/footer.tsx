@@ -12,9 +12,9 @@ export function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-16 mb-24">
           {/* Brand Identity */}
           <div className="md:col-span-2">
-            <h3 className="headline-secondary text-4xl mb-8 tracking-[-0.03em]">ARÔME</h3>
+            <h3 className="headline-secondary text-4xl mb-8 tracking-[-0.03em]">AROM</h3>
             <p className="body-primary text-text/60 max-w-sm mb-12 font-serif italic italic-luxury">
-              "꽃과 향으로 누군가의 기억을 번역합니다. 당신의 가장 찬란한 순간에 ARÔME이 함께하기를."
+              "꽃과 향으로 누군가의 기억을 번역합니다. 당신의 가장 찬란한 순간에 AROM이 함께하기를."
             </p>
             <div className="flex items-center space-x-6">
               <a
@@ -22,7 +22,7 @@ export function Footer() {
                 target="_blank"
                 rel="noopener noreferrer"
                 className="group flex items-center space-x-3 label-luxury text-olive/60 hover:text-olive transition-colors"
-                aria-label="Follow ARÔME on Instagram"
+                aria-label="Follow AROM on Instagram"
               >
                 <div className="p-2 border border-olive/20 group-hover:border-olive group-hover:bg-olive group-hover:text-white transition-all duration-300">
                   <Instagram className="h-4 w-4" />
@@ -75,7 +75,7 @@ export function Footer() {
         {/* Legal & Copyright */}
         <div className="pt-16 border-t border-olive/10 flex flex-col md:flex-row justify-between items-center gap-8">
           <p className="text-[10px] uppercase tracking-[0.2em] text-text/30">
-            &copy; {currentYear} ARÔME. Curation for Your Memories.
+            &copy; {currentYear} AROM. Curation for Your Memories.
           </p>
           <div className="flex space-x-10 text-[10px] uppercase tracking-[0.2em] text-text/30">
             <Link href="/privacy" className="hover:text-olive transition-colors">Privacy Policy</Link>
