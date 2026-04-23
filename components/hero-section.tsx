@@ -20,17 +20,17 @@ export function HeroSection() {
   const contentOpacity = useTransform(scrollYProgress, [0, 0.5], [1, 0])
 
   return (
-    <section ref={containerRef} className="relative h-screen overflow-hidden bg-[#FDFBF7]">
+    <section ref={containerRef} className="relative h-screen overflow-hidden bg-background">
       <motion.div className="absolute inset-0" style={{ scale: imageScale, y: imageY }}>
         <Image
           src="/subtle-soft-floral-blur-background-low-saturation-.jpg"
           alt=""
           fill
-          className="object-cover opacity-20 sepia-[0.2]"
+          className="object-cover opacity-10"
           priority
           sizes="100vw"
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-[#FDFBF7]/80 via-transparent to-[#FDFBF7]/40" />
+        <div className="absolute inset-0 bg-gradient-to-b from-background/90 via-transparent to-background/50" />
       </motion.div>
 
       <motion.div

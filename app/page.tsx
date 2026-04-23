@@ -88,7 +88,7 @@ export default function HomePage() {
       </section>
 
       {/* Scent Kit Application Section */}
-      <section className="bg-[#F9F5F0]">
+      <section className="bg-secondary/50">
         <ScentKitSection />
       </section>
 

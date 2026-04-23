@@ -21,7 +21,7 @@ export default function ShopPage() {
   const filteredProducts = products.filter((p) => filterCategory === "all" || p.category === filterCategory)
 
   return (
-    <main className="min-h-screen bg-[#FDFBF7]">
+    <main className="min-h-screen bg-background">
       <Header />
 
       <section className="pt-48 pb-32 px-6">

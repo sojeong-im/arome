@@ -10,9 +10,9 @@ export function ScentKitSection() {
   const formUrl = "https://forms.gle/uDPXfv2GJq7DhhjW9"
 
   return (
-    <section className="py-40 px-6 bg-[#F9F5F0]" aria-labelledby="scent-kit-title">
+    <section className="py-40 px-6 bg-secondary" aria-labelledby="scent-kit-title">
       <div className="max-w-6xl mx-auto">
-        <div className="relative bg-[#FDFBF7] p-12 md:p-24 border border-olive/10 overflow-hidden">
+        <div className="relative bg-background p-12 md:p-24 border border-border overflow-hidden">
           {/* Subtle Decorative Elements */}
           <div className="absolute top-0 right-0 w-64 h-64 bg-secondary/10 rounded-full -translate-y-1/2 translate-x-1/2 blur-3xl opacity-50" />
           <div className="absolute bottom-0 left-0 w-96 h-96 bg-olive/5 rounded-full translate-y-1/2 -translate-x-1/2 blur-3xl opacity-30" />

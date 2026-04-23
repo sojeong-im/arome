@@ -2,76 +2,34 @@
 @import "tw-animate-css";
 
 :root {
-  /* AROM Luxury Floral Color System - Refined */
-  --background: #fdfbf7; /* Softer cream */
-  --foreground: #1c1c1c; /* Softer black */
+  /* AROM Sophisticated Neutral Color System */
+  --background: #ffffff;
+  --foreground: #1a1a1a;
   --card: #ffffff;
-  --card-foreground: #1c1c1c;
+  --card-foreground: #1a1a1a;
   --popover: #ffffff;
-  --popover-foreground: #1c1c1c;
-  --primary: #4a5d4e; /* Deeper Sage */
-  --primary-foreground: #fdfbf7;
-  --secondary: #f0e9df; /* Muted beige */
-  --secondary-foreground: #1c1c1c;
-  --muted: #f9f5f0;
-  --muted-foreground: #666666;
-  --accent: #dcd0bc; /* Warm sand */
-  --accent-foreground: #1c1c1c;
+  --popover-foreground: #1a1a1a;
+  --primary: #262626; /* Charcoal */
+  --primary-foreground: #ffffff;
+  --secondary: #f5f5f5; /* Light Gray */
+  --secondary-foreground: #1a1a1a;
+  --muted: #f9f9f9;
+  --muted-foreground: #737373;
+  --accent: #e5e5e5;
+  --accent-foreground: #1a1a1a;
   --destructive: #af3e32;
   --destructive-foreground: #ffffff;
-  --border: #ece3d5;
-  --input: #ece3d5;
-  --ring: #4a5d4e;
-  --radius: 0.5rem; /* More minimalist radius */
-  --chart-1: oklch(0.646 0.222 41.116);
-  --chart-2: oklch(0.6 0.118 184.704);
-  --chart-3: oklch(0.398 0.07 227.392);
-  --chart-4: oklch(0.828 0.189 84.429);
-  --chart-5: oklch(0.769 0.188 70.08);
-  --sidebar: oklch(1 0 0);
-  --sidebar-foreground: oklch(0.145 0 0);
-  --sidebar-primary: oklch(0.205 0 0);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.97 0 0);
-  --sidebar-accent-foreground: oklch(0.205 0 0);
-  --sidebar-border: oklch(0.922 0 0);
-  --sidebar-ring: oklch(0.708 0 0);
+  --border: #e5e5e5;
+  --input: #e5e5e5;
+  --ring: #262626;
+  --radius: 0.125rem; /* More minimalist/architectural radius */
 }
 
 
 .dark {
-  --background: oklch(0.145 0 0);
-  --foreground: oklch(0.985 0 0);
-  --card: oklch(0.145 0 0);
-  --card-foreground: oklch(0.985 0 0);
-  --popover: oklch(0.145 0 0);
-  --popover-foreground: oklch(0.985 0 0);
-  --primary: oklch(0.985 0 0);
-  --primary-foreground: oklch(0.205 0 0);
-  --secondary: oklch(0.269 0 0);
-  --secondary-foreground: oklch(0.985 0 0);
-  --muted: oklch(0.269 0 0);
-  --muted-foreground: oklch(0.708 0 0);
-  --accent: oklch(0.269 0 0);
-  --accent-foreground: oklch(0.985 0 0);
-  --destructive: oklch(0.396 0.141 25.723);
-  --destructive-foreground: oklch(0.637 0.237 25.331);
-  --border: oklch(0.269 0 0);
-  --input: oklch(0.269 0 0);
-  --ring: oklch(0.439 0 0);
-  --chart-1: oklch(0.488 0.243 264.376);
-  --chart-2: oklch(0.696 0.17 162.48);
-  --chart-3: oklch(0.769 0.188 70.08);
-  --chart-4: oklch(0.627 0.265 303.9);
-  --chart-5: oklch(0.645 0.246 16.439);
-  --sidebar: oklch(0.205 0 0);
-  --sidebar-foreground: oklch(0.985 0 0);
-  --sidebar-primary: oklch(0.488 0.243 264.376);
-  --sidebar-primary-foreground: oklch(0.985 0 0);
-  --sidebar-accent: oklch(0.269 0 0);
-  --sidebar-accent-foreground: oklch(0.985 0 0);
-  --sidebar-border: oklch(0.269 0 0);
-  --sidebar-ring: oklch(0.439 0 0);
+  --background: #121212;
+  --foreground: #f5f5f5;
+  /* ... simplified dark mode ... */
 }
 
 @theme inline {
@@ -79,14 +37,14 @@
   --font-sans: "Pretendard", -apple-system, BlinkMacSystemFont, system-ui, sans-serif;
   --font-serif: var(--font-noto-serif-kr), "Noto Serif KR", Georgia, serif;
 
-  /* AROM Color Palette */
-  --color-ivory: #faf8f5;
-  --color-beige: #e8dfd3;
-  --color-olive: #5a6f4c;
-  --color-olive-dark: #3d4a33;
-  --color-text: #2d2d2d;
-  --color-text-light: #7a7a7a;
-  --color-accent: #d4c4b0;
+  /* AROM Sophisticated Palette (Neutralized) */
+  --color-ivory: #ffffff;
+  --color-beige: #f5f5f5;
+  --color-olive: #404040; /* Slate Gray */
+  --color-olive-dark: #171717;
+  --color-text: #1a1a1a;
+  --color-text-light: #737373;
+  --color-accent: #d4d4d4;
 
   /* Shadcn color mappings */
   --color-background: var(--background);

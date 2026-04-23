@@ -169,7 +169,7 @@ export const events: Event[] = [
     flowerMeaning: "기억, 계절, 감정의 향기화",
     story:
       "모든 향에는 저마다의 서사가 담겨 있습니다. '기억의 시향실'은 텍스트나 이름이 아닌, 오직 당신의 기억을 바탕으로 향을 찾아가는 여정입니다. 프라이빗한 상담석에서 조향사가 묻는 질문들에 답하며 마음속에 묻어두었던 계절의 온도, 공기의 질감, 당시의 습도를 떠올려보세요. 당신의 답변을 통해 분석된 감정 차트를 기반으로 가장 어울리는 세 가지 향을 추천해 드립니다. 상담이 끝난 후에는 당신의 기억이 담긴 시향지와 함께, 그날의 인터뷰 결과를 기록한 아카이브 카드를 선물로 드립니다.",
-    image: "/event-scent-interview.png",
+    image: "/scent-interview-new.png",
     formUrl: "https://forms.google.com/scent-memory",
     status: "ongoing",
     startDate: "2025-08-10",
