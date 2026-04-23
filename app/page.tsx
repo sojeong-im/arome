@@ -52,24 +52,34 @@ export default function HomePage() {
               전체 컬렉션 <ArrowRight className="w-4 h-4 group-hover:translate-x-1 transition-transform" />
             </Link>
           </div>
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
               <Link key={product.id} href={`/product/${product.id}`} className="group">
-                <div className="relative aspect-[3/4] mb-8 overflow-hidden bg-secondary/20">
-                  <img
-                    src={product.image || "/placeholder.svg"}
-                    alt={product.name}
-                    className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110"
-                  />
-                  <div className="absolute inset-0 bg-black/5 opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
-                </div>
-                <div className="text-center">
-                  <span className="text-[10px] uppercase tracking-[0.2em] text-muted-foreground mb-2 block">{product.category}</span>
-                  <h3 className="headline-tertiary text-2xl mb-2">{product.name}</h3>
-                  <p className="body-secondary text-muted-foreground/80 mb-4 line-clamp-1 italic text-sm">{product.englishName}</p>
-                  <p className="font-sans text-lg tracking-tight">
-                    {product.price.toLocaleString()}원
+                <div className="border border-olive/10 group-hover:border-olive/30 transition-all duration-500 p-8 h-full flex flex-col bg-white/60 group-hover:bg-white/80">
+                  <span className="text-[10px] uppercase tracking-[0.3em] text-olive/50 mb-6 block">{product.category}</span>
+                  <h3 className="headline-tertiary text-2xl mb-1">{product.name}</h3>
+                  <p className="font-serif italic text-muted-foreground/60 text-sm mb-6">{product.englishName}</p>
+                  <div className="w-6 h-px bg-olive/20 mb-6" />
+                  <p className="body-primary text-muted-foreground text-sm leading-relaxed mb-6 flex-1">
+                    {product.storyCopy}
                   </p>
+                  <div className="space-y-2 mb-6">
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-olive/40">Top</p>
+                    <p className="text-xs text-muted-foreground">{product.notes.top.join(" · ")}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-olive/40 pt-1">Middle</p>
+                    <p className="text-xs text-muted-foreground">{product.notes.middle.join(" · ")}</p>
+                    <p className="text-[10px] uppercase tracking-[0.2em] text-olive/40 pt-1">Base</p>
+                    <p className="text-xs text-muted-foreground">{product.notes.base.join(" · ")}</p>
+                  </div>
+                  <div className="w-full h-px bg-olive/10 mb-6" />
+                  <div className="flex items-center justify-between">
+                    <p className="font-sans text-lg tracking-tight font-medium">
+                      {product.price.toLocaleString()}원
+                    </p>
+                    <span className="text-[10px] uppercase tracking-[0.2em] text-olive group-hover:text-olive/80 transition-colors">
+                      View →
+                    </span>
+                  </div>
                 </div>
               </Link>
             ))}
