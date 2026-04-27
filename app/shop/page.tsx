@@ -58,24 +58,28 @@ export default function ShopPage() {
             {filteredProducts.map((product, i) => (
               <Reveal key={product.id} delay={0.1 * (i % 3)}>
                 <Link href={`/product/${product.id}`} className="group block h-full">
-                  <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 p-8 h-full flex flex-col bg-background/60 group-hover:bg-background/80 backdrop-blur-sm">
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-6 block">{product.category}</span>
-                    <h3 className="headline-tertiary text-2xl mb-1">{product.name}</h3>
-                    <p className="font-serif italic text-foreground/40 text-sm mb-6">{product.englishName}</p>
-                    <div className="w-6 h-px bg-primary/20 mb-6" />
-                    <p className="text-sm text-foreground/60 leading-relaxed mb-4 flex-1">{product.storyCopy}</p>
-                    <div className="text-xs text-foreground/40 mb-1">
-                      <span className="uppercase tracking-widest text-[9px] text-primary/40">꽃말</span>
-                      <p className="mt-1">{product.flowerMeaning}</p>
+                  <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 h-full flex flex-col bg-background/60 group-hover:bg-background/80 backdrop-blur-sm overflow-hidden">
+                    {/* Image Container */}
+                    <div className="aspect-[4/5] bg-secondary/5 relative overflow-hidden p-10 flex items-center justify-center">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105"
+                      />
                     </div>
-                    <div className="my-4 space-y-2">
-                      <p className="text-[9px] uppercase tracking-widest text-primary/40">Notes</p>
-                      <p className="text-xs text-foreground/50">{[...product.notes.top, ...product.notes.middle, ...product.notes.base].join(" · ")}</p>
-                    </div>
-                    <div className="w-full h-px bg-primary/10 mt-auto pt-6 mb-4" />
-                    <div className="flex items-center justify-between">
-                      <p className="font-sans text-lg font-medium tracking-tight">{product.price.toLocaleString()}원</p>
-                      <span className="text-[10px] uppercase tracking-widest text-primary">View →</span>
+                    
+                    <div className="p-8 flex-1 flex flex-col">
+                      <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-4 block">{product.category}</span>
+                      <h3 className="headline-tertiary text-2xl mb-1">{product.name}</h3>
+                      <p className="font-serif italic text-foreground/40 text-sm mb-6">{product.englishName}</p>
+                      <div className="w-6 h-px bg-primary/20 mb-6" />
+                      <p className="text-sm text-foreground/60 leading-relaxed mb-6 flex-1 line-clamp-2">{product.storyCopy}</p>
+                      
+                      <div className="w-full h-px bg-primary/10 mt-auto pt-6 mb-4" />
+                      <div className="flex items-center justify-between">
+                        <p className="font-sans text-lg font-medium tracking-tight">{product.price.toLocaleString()}원</p>
+                        <span className="text-[10px] uppercase tracking-widest text-primary group-hover:translate-x-1 transition-transform">View Details →</span>
+                      </div>
                     </div>
                   </div>
                 </Link>

@@ -61,7 +61,7 @@ export const products: Product[] = [
     storyCopy: "일상의 소란 속에서 찾은 고요한 쉼터. 라벤더는 고대부터 치유와 평온을 상징해왔습니다.",
     description: "평온함을 선사하는 라벤더 향",
     price: 79000,
-    image: "/arome-lavender-quiet-sanctuary-perfume.jpg",
+    image: "/rom_RRR.jpg",
     notes: {
       top: ["라벤더", "레몬"],
       middle: ["아이리스", "바이올렛"],
@@ -80,7 +80,7 @@ export const products: Product[] = [
     storyCopy: "달빛 아래 피어나는 은밀한 고백. 자스민은 밤에 가장 강렬한 향을 내뿜으며 신비로움을 간직합니다.",
     description: "신비롭고 관능적인 자스민 향",
     price: 95000,
-    image: "/arome-jasmine-moonlit-confession-perfume.jpg",
+    image: "/rom_RR.jpg",
     notes: {
       top: ["만다린", "그린 티"],
       middle: ["자스민", "일랑일랑"],
@@ -99,7 +99,7 @@ export const products: Product[] = [
     storyCopy: "당신의 첫 장면을 응원하는 꽃말. 작약은 봄을 대표하는 꽃으로 새로운 시작과 풍요를 상징합니다.",
     description: "생기 넘치는 작약 향",
     price: 85000,
-    image: "/arome-peony-prelude-perfume.jpg",
+    image: "/rom_R.jpg",
     notes: {
       top: ["시트러스", "프리지아"],
       middle: ["피오니", "로즈"],

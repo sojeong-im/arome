@@ -94,30 +94,33 @@ export default function HomePage() {
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {featuredProducts.map((product) => (
               <Link key={product.id} href={`/product/${product.id}`} className="group">
-                <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 p-8 h-full flex flex-col bg-background/60 group-hover:bg-background/90 backdrop-blur-sm">
-                  <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-6 block">{product.category}</span>
-                  <h3 className="headline-tertiary text-2xl mb-1">{product.name}</h3>
-                  <p className="font-serif italic text-foreground/40 text-sm mb-6">{product.englishName}</p>
-                  <div className="w-6 h-px bg-primary/20 mb-6" />
-                  <p className="body-primary text-foreground/70 text-sm leading-relaxed mb-6 flex-1">
-                    {product.storyCopy}
-                  </p>
-                  <div className="space-y-2 mb-6">
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-primary/40">Top</p>
-                    <p className="text-xs text-foreground/60">{product.notes.top.join(" · ")}</p>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-primary/40 pt-1">Middle</p>
-                    <p className="text-xs text-foreground/60">{product.notes.middle.join(" · ")}</p>
-                    <p className="text-[10px] uppercase tracking-[0.2em] text-primary/40 pt-1">Base</p>
-                    <p className="text-xs text-foreground/60">{product.notes.base.join(" · ")}</p>
+                <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 h-full flex flex-col bg-background/60 group-hover:bg-background/90 backdrop-blur-sm overflow-hidden">
+                  {/* Image Container */}
+                  <div className="aspect-[4/5] bg-secondary/5 relative overflow-hidden p-8 flex items-center justify-center">
+                    <img
+                      src={product.image}
+                      alt={product.name}
+                      className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105"
+                    />
                   </div>
-                  <div className="w-full h-px bg-primary/10 mb-6" />
-                  <div className="flex items-center justify-between">
-                    <p className="font-sans text-lg tracking-tight font-medium">
-                      {product.price.toLocaleString()}원
+                  
+                  <div className="p-8 flex-1 flex flex-col">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-6 block">{product.category}</span>
+                    <h3 className="headline-tertiary text-2xl mb-1">{product.name}</h3>
+                    <p className="font-serif italic text-foreground/40 text-sm mb-6">{product.englishName}</p>
+                    <div className="w-6 h-px bg-primary/20 mb-6" />
+                    <p className="body-primary text-foreground/70 text-sm leading-relaxed mb-8 flex-1 line-clamp-3">
+                      {product.storyCopy}
                     </p>
-                    <span className="text-[10px] uppercase tracking-[0.2em] text-primary group-hover:text-primary transition-colors">
-                      View →
-                    </span>
+                    <div className="w-full h-px bg-primary/10 mb-6" />
+                    <div className="flex items-center justify-between">
+                      <p className="font-sans text-lg tracking-tight font-medium">
+                        {product.price.toLocaleString()}원
+                      </p>
+                      <span className="text-[10px] uppercase tracking-[0.2em] text-primary">
+                        View →
+                      </span>
+                    </div>
                   </div>
                 </div>
               </Link>
