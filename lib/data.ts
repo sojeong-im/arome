@@ -61,7 +61,7 @@ export const products: Product[] = [
     storyCopy: "일상의 소란 속에서 찾은 고요한 쉼터. 라벤더는 고대부터 치유와 평온을 상징해왔습니다.",
     description: "평온함을 선사하는 라벤더 향",
     price: 79000,
-    image: "/arome-lavender-quiet-sanctuary-perfume.jpg",
+    image: "",
     notes: {
       top: ["라벤더", "레몬"],
       middle: ["아이리스", "바이올렛"],
@@ -80,7 +80,7 @@ export const products: Product[] = [
     storyCopy: "달빛 아래 피어나는 은밀한 고백. 자스민은 밤에 가장 강렬한 향을 내뿜으며 신비로움을 간직합니다.",
     description: "신비롭고 관능적인 자스민 향",
     price: 95000,
-    image: "/arome-jasmine-moonlit-confession-perfume.jpg",
+    image: "",
     notes: {
       top: ["만다린", "그린 티"],
       middle: ["자스민", "일랑일랑"],
@@ -118,7 +118,7 @@ export const products: Product[] = [
     storyCopy: "말하지 못한 마음이 향으로 남는 순간. 아이리스는 우아하고 파우더리한 향으로 은은한 감정을 전합니다.",
     description: "우아하고 파우더리한 아이리스 향",
     price: 92000,
-    image: "/arome-iris-letters-bloom-perfume.jpg",
+    image: "",
     notes: {
       top: ["네롤리", "알데하이드"],
       middle: ["아이리스", "미모사"],
@@ -137,7 +137,7 @@ export const products: Product[] = [
     storyCopy: "문득 떠오르는 얼굴 같은 따뜻한 노트. 치자꽃은 달빛 아래 피어나며 순수하고 깊은 감정을 담습니다.",
     description: "달빛 아래 피어나는 치자꽃 향",
     price: 88000,
-    image: "/arome-gardenia-tea-memory-perfume.jpg",
+    image: "",
     notes: {
       top: ["베르가못", "카다몬"],
       middle: ["가드니아", "튜베로즈"],

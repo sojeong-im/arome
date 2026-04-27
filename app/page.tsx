@@ -96,13 +96,15 @@ export default function HomePage() {
               <Link key={product.id} href={`/product/${product.id}`} className="group">
                 <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 h-full flex flex-col bg-background/60 group-hover:bg-background/90 backdrop-blur-sm overflow-hidden">
                   {/* Image Container */}
-                  <div className="aspect-[4/5] bg-secondary/5 relative overflow-hidden p-8 flex items-center justify-center">
-                    <img
-                      src={product.image}
-                      alt={product.name}
-                      className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105"
-                    />
-                  </div>
+                  {product.image && (
+                    <div className="aspect-[4/5] bg-secondary/5 relative overflow-hidden p-8 flex items-center justify-center">
+                      <img
+                        src={product.image}
+                        alt={product.name}
+                        className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105"
+                      />
+                    </div>
+                  )}
                   
                   <div className="p-8 flex-1 flex flex-col">
                     <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-6 block">{product.category}</span>

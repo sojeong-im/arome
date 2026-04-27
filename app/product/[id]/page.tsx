@@ -52,16 +52,18 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
       <Header />
 
       <div className="pt-48 pb-32 px-6">
-        <div className="max-w-6xl mx-auto">
-          <div className="grid md:grid-cols-2 gap-24 items-start">
+        <div className={`max-w-6xl mx-auto ${!product.image ? 'max-w-3xl' : ''}`}>
+          <div className={`${product.image ? 'grid md:grid-cols-2 gap-24 items-start' : 'flex flex-col'}`}>
             {/* Product Image */}
-            <div className="aspect-[4/5] bg-secondary/10 relative overflow-hidden group">
-              <img
-                src={product.image}
-                alt={product.name}
-                className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12"
-              />
-            </div>
+            {product.image && (
+              <div className="aspect-[4/5] bg-secondary/10 relative overflow-hidden group">
+                <img
+                  src={product.image}
+                  alt={product.name}
+                  className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12"
+                />
+              </div>
+            )}
 
             {/* Product Info */}
             <div className="flex flex-col">
