@@ -96,11 +96,11 @@ export default function MyPage() {
                     </p>
                     <div className="space-y-3">
                       <Link
-                        href={`/product/${products[4].id}`}
+                        href={`/product/${products[0].id}`}
                         className="block p-3 bg-background border border-primary/10 hover:border-primary transition-colors"
                       >
-                        <p className="font-serif text-lg mb-1 text-foreground">{products[4].name}</p>
-                        <p className="body-secondary text-foreground/40 text-sm">{products[4].englishName}</p>
+                        <p className="font-serif text-lg mb-1 text-foreground">{products[0].name}</p>
+                        <p className="body-secondary text-foreground/40 text-sm">{products[0].englishName}</p>
                       </Link>
                       <Link
                         href={`/product/${products[1].id}`}
@@ -251,7 +251,7 @@ export default function MyPage() {
                     <p className="body-secondary text-foreground/40 mb-2">2024.12.20</p>
                     <h3 className="label-luxury mb-2 text-primary">첫 향수 구매</h3>
                     <p className="body-secondary text-foreground/60 leading-relaxed">
-                      "편지에 남은 향"을 선택하셨습니다.
+                      "{products[0].name}"을 선택하셨습니다.
                     </p>
                   </div>
                 </div>
