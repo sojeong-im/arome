@@ -56,11 +56,11 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           <div className={`${product.image ? 'grid md:grid-cols-2 gap-24 items-start' : 'flex flex-col'}`}>
             {/* Product Image */}
             {product.image && (
-              <div className="aspect-[4/5] bg-secondary/10 relative overflow-hidden group">
+              <div className="aspect-[4/5] relative overflow-hidden group">
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12 mix-blend-multiply"
+                  className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12 mix-blend-multiply brightness-[1.05] contrast-[1.05]"
                 />
               </div>
             )}

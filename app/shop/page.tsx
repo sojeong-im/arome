@@ -61,11 +61,11 @@ export default function ShopPage() {
                   <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 h-full flex flex-col bg-background/60 group-hover:bg-background/80 backdrop-blur-sm overflow-hidden">
                     {/* Image Container */}
                     {product.image && (
-                      <div className="aspect-[4/5] bg-secondary/5 relative overflow-hidden p-10 flex items-center justify-center">
+                      <div className="aspect-[4/5] relative overflow-hidden p-10 flex items-center justify-center">
                         <img
                           src={product.image}
                           alt={product.name}
-                          className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 mix-blend-multiply"
+                          className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 mix-blend-multiply brightness-[1.05] contrast-[1.05]"
                         />
                       </div>
                     )}
