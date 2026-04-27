@@ -48,7 +48,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
   }
 
   return (
-    <main className="min-h-screen">
+    <main className="min-h-screen bg-background">
       <Header />
 
       <div className="pt-32 pb-24 px-6">
@@ -57,11 +57,11 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
             {/* Product Info */}
             <div className="flex flex-col">
               {/* Header */}
-              <div className="mb-10 border-b border-olive/10 pb-10">
-                <span className="text-[10px] uppercase tracking-[0.3em] text-olive/50 mb-4 block">{product.category}</span>
-                <h1 className="headline-primary mb-2">{product.name}</h1>
+              <div className="mb-10 border-b border-primary/10 pb-10">
+                <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-4 block">{product.category}</span>
+                <h1 className="headline-primary mb-2 text-foreground">{product.name}</h1>
                 {product.englishName && (
-                  <p className="font-sans text-lg tracking-luxury-wide text-muted-foreground/70 uppercase">
+                  <p className="font-serif italic text-lg tracking-luxury-wide text-foreground/40">
                     {product.englishName}
                   </p>
                 )}
@@ -69,47 +69,47 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
 
               {/* Story / Memory Section */}
               <div className="mb-10">
-                <h3 className="headline-tertiary text-xl mb-4">Story</h3>
-                <p className="body-primary text-muted-foreground leading-relaxed">{product.storyCopy}</p>
+                <h3 className="headline-tertiary text-xl mb-4 text-foreground">Story</h3>
+                <p className="body-primary text-foreground/70 leading-relaxed">{product.storyCopy}</p>
               </div>
 
               {/* Flower Meaning & Memory Theme */}
-              <div className="grid grid-cols-2 gap-8 mb-10 border-y border-olive/10 py-8">
+              <div className="grid grid-cols-2 gap-8 mb-10 border-y border-primary/10 py-8">
                 <div>
-                  <p className="body-small text-muted-foreground/50 mb-2 uppercase tracking-widest text-[10px]">꽃말</p>
-                  <p className="body-secondary font-medium">{product.flowerMeaning}</p>
+                  <p className="body-small text-foreground/40 mb-2 uppercase tracking-widest text-[10px]">꽃말</p>
+                  <p className="body-secondary font-medium text-foreground/80">{product.flowerMeaning}</p>
                 </div>
                 <div>
-                  <p className="body-small text-muted-foreground/50 mb-2 uppercase tracking-widest text-[10px]">기억 테마</p>
-                  <p className="body-secondary font-medium">{product.memoryTheme}</p>
+                  <p className="body-small text-foreground/40 mb-2 uppercase tracking-widest text-[10px]">기억 테마</p>
+                  <p className="body-secondary font-medium text-foreground/80">{product.memoryTheme}</p>
                 </div>
               </div>
 
               {/* Fragrance Notes */}
               <div className="mb-10">
-                <h3 className="headline-tertiary text-xl mb-6">Fragrance Notes</h3>
+                <h3 className="headline-tertiary text-xl mb-6 text-foreground">Fragrance Notes</h3>
                 <div className="grid grid-cols-3 gap-6">
                   <div>
-                    <p className="body-small text-muted-foreground/50 mb-3 uppercase tracking-widest text-[10px]">Top</p>
+                    <p className="body-small text-foreground/40 mb-3 uppercase tracking-widest text-[10px]">Top</p>
                     <div className="space-y-1">
                       {product.notes.top.map((note) => (
-                        <p key={note} className="body-secondary text-sm">{note}</p>
+                        <p key={note} className="body-secondary text-sm text-foreground/70">{note}</p>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <p className="body-small text-muted-foreground/50 mb-3 uppercase tracking-widest text-[10px]">Middle</p>
+                    <p className="body-small text-foreground/40 mb-3 uppercase tracking-widest text-[10px]">Middle</p>
                     <div className="space-y-1">
                       {product.notes.middle.map((note) => (
-                        <p key={note} className="body-secondary text-sm">{note}</p>
+                        <p key={note} className="body-secondary text-sm text-foreground/70">{note}</p>
                       ))}
                     </div>
                   </div>
                   <div>
-                    <p className="body-small text-muted-foreground/50 mb-3 uppercase tracking-widest text-[10px]">Base</p>
+                    <p className="body-small text-foreground/40 mb-3 uppercase tracking-widest text-[10px]">Base</p>
                     <div className="space-y-1">
                       {product.notes.base.map((note) => (
-                        <p key={note} className="body-secondary text-sm">{note}</p>
+                        <p key={note} className="body-secondary text-sm text-foreground/70">{note}</p>
                       ))}
                     </div>
                   </div>
@@ -118,25 +118,25 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
 
               {/* Technical Info */}
               <div className="mb-10">
-                <div className="flex items-center justify-between mb-4 pb-4 border-b border-olive/10">
-                  <span className="body-secondary text-muted-foreground">제품명</span>
-                  <span className="body-secondary font-medium">{product.technicalName}</span>
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-primary/10">
+                  <span className="body-secondary text-foreground/50">제품명</span>
+                  <span className="body-secondary font-medium text-foreground/80">{product.technicalName}</span>
                 </div>
-                <div className="flex items-center justify-between mb-4 pb-4 border-b border-olive/10">
-                  <span className="body-secondary text-muted-foreground">용량</span>
-                  <span className="body-secondary font-medium">{product.volume}</span>
+                <div className="flex items-center justify-between mb-4 pb-4 border-b border-primary/10">
+                  <span className="body-secondary text-foreground/50">용량</span>
+                  <span className="body-secondary font-medium text-foreground/80">{product.volume}</span>
                 </div>
               </div>
 
               {/* Price & CTA */}
               <div className="flex items-center gap-6">
                 <div>
-                  <p className="body-small text-muted-foreground/70 mb-1">Price</p>
-                  <p className="headline-tertiary text-3xl">{product.price.toLocaleString()}원</p>
+                  <p className="body-small text-foreground/50 mb-1">Price</p>
+                  <p className="headline-tertiary text-3xl text-foreground">{product.price.toLocaleString()}원</p>
                 </div>
                 <Button
                   size="lg"
-                  className="flex-1 bg-primary hover:bg-primary/90 text-primary-foreground rounded-none button-text-luxury"
+                  className="flex-1 bg-primary hover:bg-foreground text-background rounded-none button-text-luxury transition-all duration-500"
                   onClick={addToCart}
                   disabled={isAdding}
                 >
