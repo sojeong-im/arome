@@ -28,27 +28,27 @@ export default function ShopPage() {
         <div className="max-w-7xl mx-auto">
           <Reveal>
             <div className="text-center mb-24">
-              <span className="label-luxury text-olive mb-6 block">Our Collection</span>
+              <span className="label-luxury text-primary mb-6 block">Our Collection</span>
               <h1 className="headline-hero mb-8">당신의 계절을 위한 향기</h1>
-              <p className="body-primary text-text/60 max-w-xl mx-auto font-serif italic text-lg">
+              <p className="body-primary text-foreground/60 max-w-xl mx-auto font-serif italic text-lg">
                 AROM의 모든 향수는 엄선된 프리미엄 원재료와 한 사람의 진심 어린 이야기를 담아 조제됩니다.
               </p>
             </div>
           </Reveal>
 
           {/* Luxury Filter Bar */}
-          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 mb-24 border-y border-olive/10 py-8">
+          <div className="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 mb-24 border-y border-primary/10 py-8">
             {categories.map((cat) => (
               <button
                 key={cat.id}
                 onClick={() => setFilterCategory(cat.id)}
                 className={`label-luxury transition-all duration-300 relative pb-1 ${
-                  filterCategory === cat.id ? "text-olive" : "text-text/40 hover:text-text/60"
+                  filterCategory === cat.id ? "text-primary" : "text-foreground/40 hover:text-foreground/60"
                 }`}
               >
                 {cat.name}
                 {filterCategory === cat.id && (
-                  <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-olive" />
+                  <div className="absolute bottom-0 left-0 right-0 h-[1px] bg-primary" />
                 )}
               </button>
             ))}
@@ -58,24 +58,24 @@ export default function ShopPage() {
             {filteredProducts.map((product, i) => (
               <Reveal key={product.id} delay={0.1 * (i % 3)}>
                 <Link href={`/product/${product.id}`} className="group block h-full">
-                  <div className="border border-olive/10 group-hover:border-olive/30 transition-all duration-500 p-8 h-full flex flex-col bg-white/60 group-hover:bg-white/80">
-                    <span className="text-[10px] uppercase tracking-[0.3em] text-olive/50 mb-6 block">{product.category}</span>
+                  <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 p-8 h-full flex flex-col bg-background/60 group-hover:bg-background/80 backdrop-blur-sm">
+                    <span className="text-[10px] uppercase tracking-[0.3em] text-primary/50 mb-6 block">{product.category}</span>
                     <h3 className="headline-tertiary text-2xl mb-1">{product.name}</h3>
-                    <p className="font-serif italic text-text/40 text-sm mb-6">{product.englishName}</p>
-                    <div className="w-6 h-px bg-olive/20 mb-6" />
-                    <p className="text-sm text-text/60 leading-relaxed mb-4 flex-1">{product.storyCopy}</p>
-                    <div className="text-xs text-text/40 mb-1">
-                      <span className="uppercase tracking-widest text-[9px] text-olive/40">꽃말</span>
+                    <p className="font-serif italic text-foreground/40 text-sm mb-6">{product.englishName}</p>
+                    <div className="w-6 h-px bg-primary/20 mb-6" />
+                    <p className="text-sm text-foreground/60 leading-relaxed mb-4 flex-1">{product.storyCopy}</p>
+                    <div className="text-xs text-foreground/40 mb-1">
+                      <span className="uppercase tracking-widest text-[9px] text-primary/40">꽃말</span>
                       <p className="mt-1">{product.flowerMeaning}</p>
                     </div>
                     <div className="my-4 space-y-2">
-                      <p className="text-[9px] uppercase tracking-widest text-olive/40">Notes</p>
-                      <p className="text-xs text-text/50">{[...product.notes.top, ...product.notes.middle, ...product.notes.base].join(" · ")}</p>
+                      <p className="text-[9px] uppercase tracking-widest text-primary/40">Notes</p>
+                      <p className="text-xs text-foreground/50">{[...product.notes.top, ...product.notes.middle, ...product.notes.base].join(" · ")}</p>
                     </div>
-                    <div className="w-full h-px bg-olive/10 mt-auto pt-6 mb-4" />
+                    <div className="w-full h-px bg-primary/10 mt-auto pt-6 mb-4" />
                     <div className="flex items-center justify-between">
                       <p className="font-sans text-lg font-medium tracking-tight">{product.price.toLocaleString()}원</p>
-                      <span className="text-[10px] uppercase tracking-widest text-olive">View →</span>
+                      <span className="text-[10px] uppercase tracking-widest text-primary">View →</span>
                     </div>
                   </div>
                 </Link>
