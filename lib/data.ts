@@ -80,7 +80,7 @@ export const products: Product[] = [
     storyCopy: "달빛 아래 피어나는 은밀한 고백. 자스민은 밤에 가장 강렬한 향을 내뿜으며 신비로움을 간직합니다.",
     description: "신비롭고 관능적인 자스민 향",
     price: 95000,
-    image: "",
+    image: "/rom_square_transparent.jpg",
     notes: {
       top: ["만다린", "그린 티"],
       middle: ["자스민", "일랑일랑"],
