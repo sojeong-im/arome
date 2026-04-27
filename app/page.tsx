@@ -173,9 +173,9 @@ export default function HomePage() {
           <div className="grid md:grid-cols-2 gap-20 items-center">
             <div className="order-2 md:order-1 relative aspect-[4/5] rounded-none overflow-hidden group">
               <img
-                src="/seongsu-scent-exhibition-main.png"
+                src="/seongsu-scent-exhibition-real.jpg"
                 alt="AROM Events"
-                className="w-full h-full object-cover grayscale-[0.2] group-hover:grayscale-0 transition-all duration-1000 group-hover:scale-105"
+                className="w-full h-full object-cover transition-all duration-1000 group-hover:scale-105"
               />
               <div className="absolute inset-0 ring-1 ring-inset ring-black/10" />
             </div>
