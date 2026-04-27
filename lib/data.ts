@@ -61,7 +61,7 @@ export const products: Product[] = [
     storyCopy: "일상의 소란 속에서 찾은 고요한 쉼터. 라벤더는 고대부터 치유와 평온을 상징해왔습니다.",
     description: "평온함을 선사하는 라벤더 향",
     price: 79000,
-    image: "",
+    image: "/rom_round_fixed.jpg",
     notes: {
       top: ["라벤더", "레몬"],
       middle: ["아이리스", "바이올렛"],
