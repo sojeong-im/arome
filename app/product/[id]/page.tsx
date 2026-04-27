@@ -60,7 +60,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                 <img
                   src={product.image}
                   alt={product.name}
-                  className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12"
+                  className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12 mix-blend-multiply"
                 />
               </div>
             )}

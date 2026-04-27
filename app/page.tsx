@@ -101,7 +101,7 @@ export default function HomePage() {
                       <img
                         src={product.image}
                         alt={product.name}
-                        className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105"
+                        className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 mix-blend-multiply"
                       />
                     </div>
                   )}

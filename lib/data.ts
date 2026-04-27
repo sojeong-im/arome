@@ -42,7 +42,7 @@ export const products: Product[] = [
     storyCopy: "말없이 오래 기억되는 사람의 온기. 장미는 수천 년 동안 사랑의 상징으로 여겨져 왔습니다.",
     description: "우아하고 클래식한 장미 향",
     price: 89000,
-    image: "/rom_RR.jpg",
+    image: "/rom_rose_fixed.jpg",
     notes: {
       top: ["베르가못", "핑크 페퍼"],
       middle: ["다마스크 로즈", "제라늄"],
