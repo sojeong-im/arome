@@ -14,8 +14,7 @@ export default function ShopPage() {
     { id: "all", name: "All Collections" },
     { id: "floral", name: "Floral" },
     { id: "aromatic", name: "Aromatic" },
-    { id: "oriental", name: "Oriental" },
-    { id: "powdery", name: "Powdery" }
+    { id: "oriental", name: "Oriental" }
   ]
 
   const filteredProducts = products.filter((p) => filterCategory === "all" || p.category === filterCategory)

@@ -36,7 +36,7 @@ export function Footer() {
           <div>
             <h4 className="label-luxury mb-8 text-olive/80">Collections</h4>
             <ul className="space-y-4">
-              {["Floral", "Aromatic", "Oriental", "Powdery"].map((cat) => (
+              {["Floral", "Aromatic", "Oriental"].map((cat) => (
                 <li key={cat}>
                   <Link
                     href={`/shop?category=${cat.toLowerCase()}`}
