@@ -42,7 +42,7 @@ export const products: Product[] = [
     storyCopy: "말없이 오래 기억되는 사람의 온기. 장미는 수천 년 동안 사랑의 상징으로 여겨져 왔습니다.",
     description: "우아하고 클래식한 장미 향",
     price: 89000,
-    image: "/arome-rose-silent-amber-perfume.jpg",
+    image: "/rom_RR.jpg",
     notes: {
       top: ["베르가못", "핑크 페퍼"],
       middle: ["다마스크 로즈", "제라늄"],
@@ -61,7 +61,7 @@ export const products: Product[] = [
     storyCopy: "일상의 소란 속에서 찾은 고요한 쉼터. 라벤더는 고대부터 치유와 평온을 상징해왔습니다.",
     description: "평온함을 선사하는 라벤더 향",
     price: 79000,
-    image: "/rom_RRR.jpg",
+    image: "/arome-lavender-quiet-sanctuary-perfume.jpg",
     notes: {
       top: ["라벤더", "레몬"],
       middle: ["아이리스", "바이올렛"],
@@ -80,7 +80,7 @@ export const products: Product[] = [
     storyCopy: "달빛 아래 피어나는 은밀한 고백. 자스민은 밤에 가장 강렬한 향을 내뿜으며 신비로움을 간직합니다.",
     description: "신비롭고 관능적인 자스민 향",
     price: 95000,
-    image: "/rom_RR.jpg",
+    image: "/arome-jasmine-moonlit-confession-perfume.jpg",
     notes: {
       top: ["만다린", "그린 티"],
       middle: ["자스민", "일랑일랑"],
