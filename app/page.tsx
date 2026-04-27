@@ -97,7 +97,7 @@ export default function HomePage() {
                 <div className="border border-primary/10 group-hover:border-primary/30 transition-all duration-500 h-full flex flex-col bg-background/60 group-hover:bg-background/90 backdrop-blur-sm overflow-hidden">
                   {/* Image Container */}
                   {product.image && (
-                    <div className="aspect-[4/5] relative overflow-hidden p-8 flex items-center justify-center">
+                    <div className="aspect-[4/5] relative overflow-hidden p-8 flex items-center justify-center bg-background">
                       <img
                         src={product.image}
                         alt={product.name}

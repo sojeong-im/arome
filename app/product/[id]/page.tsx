@@ -56,7 +56,7 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
           <div className={`${product.image ? 'grid md:grid-cols-2 gap-24 items-start' : 'flex flex-col'}`}>
             {/* Product Image */}
             {product.image && (
-              <div className="aspect-[4/5] relative overflow-hidden group">
+              <div className="aspect-[4/5] relative overflow-hidden group bg-background">
                 <img
                   src={product.image}
                   alt={product.name}
