@@ -195,7 +195,7 @@ export const events: Event[] = [
     flowerMeaning: "그리움, 고백, 그리고 당신을 향한 진심",
     story:
       "이번 전시는 단순히 향을 맡는 것을 넘어, 꽃이 가진 고유한 '삶의 태도(꽃말)'를 오감으로 느끼는 공간입니다. 전시장 곳곳에 숨겨진 QR 코드를 통해 각 꽃의 비하인드 스토리와 조향 노트의 정체성을 도슨트의 음성처럼 들을 수 있습니다. 마지막 섹션인 '선택의 방'에서는 시향한 향 중 '내가 아닌 누군가'를 떠올리게 하는 향을 골라, 그를 향한 꽃말 쪽지를 남겨주세요. 전시 기간 중 매주 3명을 선정하여, 당신이 적은 쪽지와 함께 해당 실물 향수를 작성하신 주소로 직접 배송해 드리는 깜짝 이벤트도 진행됩니다.",
-    image: "/seongsu-scent-exhibition-main.png",
+    image: "/seongsu-exhibition-event.jpg",
     formUrl: "https://forms.google.com/seongsu-exhibition",
 
     status: "ongoing",
