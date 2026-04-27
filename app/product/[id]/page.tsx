@@ -61,6 +61,10 @@ export default function ProductDetailPage({ params }: { params: { id: string } }
                   src={product.image}
                   alt={product.name}
                   className="w-full h-full object-contain transition-all duration-1000 group-hover:scale-105 p-12 mix-blend-multiply brightness-[1.05] contrast-[1.05]"
+                  style={{
+                    WebkitMaskImage: 'radial-gradient(ellipse at center, black 70%, transparent 100%)',
+                    maskImage: 'radial-gradient(ellipse at center, black 70%, transparent 100%)'
+                  }}
                 />
               </div>
             )}
