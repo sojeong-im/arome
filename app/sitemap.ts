@@ -1,5 +1,5 @@
 import { MetadataRoute } from 'next'
-import { products, events } from './lib/data'
+import { products, events } from '@/lib/data'
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const baseUrl = 'https://aromeperfume.site'
