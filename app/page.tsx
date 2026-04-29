@@ -76,6 +76,19 @@ export default function HomePage() {
         </div>
       </section>
 
+      {/* Lifestyle Banner Section */}
+      <section className="py-20 px-6 bg-background overflow-hidden">
+        <div className="max-w-7xl mx-auto">
+          <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group border border-primary/5">
+            <img
+              src="/arome-lifestyle-main.jpg"
+              alt="AROM Collection Lifestyle"
+              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+            />
+          </div>
+        </div>
+      </section>
+
       {/* Featured Products Grid */}
       <section className="py-32 px-6 border-y border-border bg-secondary/20">
         <div className="max-w-7xl mx-auto">
