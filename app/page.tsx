@@ -76,15 +76,37 @@ export default function HomePage() {
         </div>
       </section>
 
-      {/* Lifestyle Banner Section */}
-      <section className="py-20 px-6 bg-background overflow-hidden">
+      {/* Lifestyle Editorial Section */}
+      <section className="py-40 px-6 bg-background overflow-hidden">
         <div className="max-w-7xl mx-auto">
-          <div className="relative aspect-[16/9] md:aspect-[21/9] overflow-hidden group border border-primary/5">
-            <img
-              src="/arome-lifestyle-main.jpg"
-              alt="AROM Collection Lifestyle"
-              className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
-            />
+          <div className="grid md:grid-cols-12 gap-12 md:gap-24 items-center">
+            <div className="md:col-span-5 order-2 md:order-1">
+              <Reveal>
+                <span className="label-luxury text-primary mb-6 block">Visual Archive</span>
+                <h2 className="headline-secondary text-5xl mb-8 leading-tight">일상의 모든 찰나가<br/>향기가 되는 순간</h2>
+                <p className="body-primary text-foreground/60 leading-relaxed mb-10 text-lg">
+                  아롬은 당신의 평범한 오후가 특별한 기억으로 치환되는 그 짧은 찰나에 집중합니다. 
+                  창가에 스며드는 햇살, 우연히 만난 꽃 한 송이, 그리고 그 곁에 머무는 아롬의 향기.
+                </p>
+                <div className="flex items-center gap-6 text-xs uppercase tracking-[0.2em] text-primary/40 font-medium">
+                  <span>Seongsu-dong</span>
+                  <div className="w-12 h-px bg-primary/20" />
+                  <span>Memory Archive No. 01</span>
+                </div>
+              </Reveal>
+            </div>
+            <div className="md:col-span-7 order-1 md:order-2">
+              <Reveal delay={0.2}>
+                <div className="relative aspect-[4/3] overflow-hidden group shadow-2xl shadow-primary/5 border border-primary/5">
+                  <img
+                    src="/arome-lifestyle-main.jpg"
+                    alt="AROM Collection Lifestyle"
+                    className="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-105"
+                  />
+                  <div className="absolute inset-0 bg-primary/5 mix-blend-multiply opacity-30 pointer-events-none" />
+                </div>
+              </Reveal>
+            </div>
           </div>
         </div>
       </section>
