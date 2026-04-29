@@ -1,5 +1,4 @@
-"use client"
-
+import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { HeroSection } from "@/components/hero-section"
@@ -8,6 +7,12 @@ import Link from "next/link"
 import { products } from "@/lib/data"
 import { ArrowRight } from "lucide-react"
 import { ScentKitSection } from "@/components/scent-kit-section"
+import { Reveal } from "@/components/reveal"
+
+export const metadata: Metadata = {
+  title: "AROM | 감정을 기록하는 퍼퓸 하우스",
+  description: "당신의 소중한 감정과 기억을 꽃말과 향기로 기록하는 공간, AROM. 성수동 시향실 예약 및 온라인 시향 키트 신청을 통해 당신만의 향기를 발견해 보세요.",
+}
 
 export default function HomePage() {
   const featuredProducts = products.slice(0, 3)

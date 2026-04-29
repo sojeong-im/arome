@@ -1,8 +1,12 @@
-"use client"
-
+import { Metadata } from "next"
 import { Header } from "@/components/header"
 import { Footer } from "@/components/footer"
 import { Reveal } from "@/components/reveal"
+
+export const metadata: Metadata = {
+  title: "Our Story | AROM - 기억을 향기로 기록하는 집",
+  description: "아롬의 탄생 배경과 철학, 그리고 성수동 시향실에서만 경험할 수 있는 특별한 아카이빙 서비스를 소개합니다. 우리는 향기로 당신의 찬란한 순간을 기록합니다.",
+}
 
 export default function AboutPage() {
   return (
