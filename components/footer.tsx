@@ -1,6 +1,5 @@
 "use client"
 
-import { Instagram } from "lucide-react"
 import Link from "next/link"
 
 export function Footer() {
@@ -16,20 +15,7 @@ export function Footer() {
             <p className="body-primary text-text/60 max-w-sm mb-12 font-serif italic italic-luxury">
               "꽃과 향으로 누군가의 기억을 번역합니다. 당신의 가장 찬란한 순간에 AROM이 함께하기를."
             </p>
-            <div className="flex items-center space-x-6">
-              <a
-                href="https://instagram.com/arome_official"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="group flex items-center space-x-3 label-luxury text-olive/60 hover:text-olive transition-colors"
-                aria-label="Follow AROM on Instagram"
-              >
-                <div className="p-2 border border-olive/20 group-hover:border-olive group-hover:bg-olive group-hover:text-white transition-all duration-300">
-                  <Instagram className="h-4 w-4" />
-                </div>
-                <span>@arome_official</span>
-              </a>
-            </div>
+
           </div>
 
           {/* Navigation */}
