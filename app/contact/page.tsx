@@ -30,47 +30,9 @@ export default function ContactPage() {
           <div className="grid md:grid-cols-2 gap-24 items-start max-w-5xl mx-auto">
             {/* Contact Information */}
             <Reveal delay={0.2}>
-              <div className="space-y-16">
+              <div className="space-y-16 h-full flex flex-col justify-center">
                 <div>
-                  <h2 className="headline-tertiary text-2xl mb-8">Visit Our Archive</h2>
-                  <div className="space-y-6">
-                    <div>
-                      <p className="body-small text-foreground/40 mb-2 uppercase tracking-widest text-[10px]">Location</p>
-                      <p className="body-secondary text-foreground/80 text-lg leading-relaxed">
-                        서울특별시 성동구 연무장길 123, 1층<br/>
-                        AROM 성수 시향실 (Memory Archive)
-                      </p>
-                    </div>
-                    <div>
-                      <p className="body-small text-foreground/40 mb-2 uppercase tracking-widest text-[10px]">Hours</p>
-                      <p className="body-secondary text-foreground/80 text-lg leading-relaxed">
-                        화요일 – 일요일: 11:00 AM – 8:00 PM<br/>
-                        (매주 월요일 휴무)
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div>
-                  <h2 className="headline-tertiary text-2xl mb-8">Direct Contact</h2>
-                  <div className="space-y-6">
-                    <div>
-                      <p className="body-small text-foreground/40 mb-2 uppercase tracking-widest text-[10px]">Email</p>
-                      <a href="mailto:hello@aromeperfume.site" className="body-secondary text-foreground/80 text-lg hover:text-primary transition-colors">
-                        hello@aromeperfume.site
-                      </a>
-                    </div>
-                    <div>
-                      <p className="body-small text-foreground/40 mb-2 uppercase tracking-widest text-[10px]">Phone</p>
-                      <p className="body-secondary text-foreground/80 text-lg">
-                        02-1234-5678
-                      </p>
-                    </div>
-                  </div>
-                </div>
-
-                <div className="pt-8 border-t border-primary/10">
-                  <p className="font-serif italic text-foreground/50 leading-relaxed">
+                  <p className="font-serif italic text-foreground/50 leading-relaxed text-2xl">
                     "향기는 보이지 않는 가장 아름다운 대화입니다.<br/>
                     언제든 편하게 안부를 전해주세요."
                   </p>
