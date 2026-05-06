@@ -5,18 +5,18 @@ import { products } from "@/lib/data"
 import { notFound } from "next/navigation"
 import { ProductDetail } from "@/components/product-detail"
 
-export async function generateMetadata({ params }: { params: { id: string } }): Promise<Metadata> {
+type Props = { params: { id: string } }
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
   const product = products.find((p) => p.id === params.id)
 
   if (!product) {
-    return {
-      title: "Product Not Found | AROM",
-    }
+    return { title: "Product Not Found | AROM" }
   }
 
   return {
     title: `${product.name} | AROM`,
-    description: `${product.name} (${product.englishName}) - ${product.description}. ${product.flowerMeaning}의 의미를 담은 향기.`,
+    description: `${product.name} (${product.englishName ?? ""}) - ${product.description}. ${product.flowerMeaning}의 의미를 담은 향기.`,
     openGraph: {
       title: `${product.name} | AROM`,
       description: product.description,
@@ -30,7 +30,7 @@ export async function generateMetadata({ params }: { params: { id: string } }): 
   }
 }
 
-export default function ProductPage({ params }: { params: { id: string } }) {
+export default function ProductPage({ params }: Props) {
   const product = products.find((p) => p.id === params.id)
 
   if (!product) {
@@ -41,21 +41,21 @@ export default function ProductPage({ params }: { params: { id: string } }) {
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Product",
-    "name": product.name,
-    "image": product.image ? [`https://aromeperfume.site${product.image}`] : [],
-    "description": product.description,
-    "sku": product.id,
-    "brand": {
+    name: product!.name,
+    image: product!.image ? [`https://aromeperfume.site${product!.image}`] : [],
+    description: product!.description,
+    sku: product!.id,
+    brand: {
       "@type": "Brand",
-      "name": "AROM"
+      name: "AROM",
     },
-    "offers": {
+    offers: {
       "@type": "Offer",
-      "url": `https://aromeperfume.site/product/${product.id}`,
-      "priceCurrency": "KRW",
-      "price": product.price,
-      "availability": "https://schema.org/InStock"
-    }
+      url: `https://aromeperfume.site/product/${product!.id}`,
+      priceCurrency: "KRW",
+      price: product!.price,
+      availability: "https://schema.org/InStock",
+    },
   }
 
   return (
@@ -67,8 +67,8 @@ export default function ProductPage({ params }: { params: { id: string } }) {
       <Header />
 
       <div className="pt-48 pb-32 px-6">
-        <div className={`max-w-6xl mx-auto ${!product.image ? 'max-w-3xl' : ''}`}>
-          <ProductDetail product={product} />
+        <div className={`max-w-6xl mx-auto ${!product!.image ? "max-w-3xl" : ""}`}>
+          <ProductDetail product={product!} />
         </div>
       </div>
 
