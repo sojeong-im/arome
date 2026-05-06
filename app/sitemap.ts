@@ -26,7 +26,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
   ]
 
   // Main pages
-  const routes = ['', '/shop', '/about', '/cart', '/my-page'].map((route) => ({
+  const routes = ['', '/shop', '/about', '/cart', '/my-page', '/contact'].map((route) => ({
     url: `${baseUrl}${route}`,
     lastModified: new Date(),
     changeFrequency: 'daily' as const,
